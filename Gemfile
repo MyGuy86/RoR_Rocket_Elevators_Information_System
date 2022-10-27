@@ -13,8 +13,8 @@ gem 'jquery-rails'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use Puma as the app server
-# gem 'puma', '~> 4.3.11'
-gem 'puma', '>= 5.1', '< 7.0' 
+gem 'puma', '~> 4.3.11'
+# gem 'puma', '>= 5.1', '< 7.0' 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -58,6 +58,7 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  # --- Capistrano
   gem 'capistrano', '~> 3.10', require: false
   gem 'capistrano-rbenv', '~> 2.2'
   gem 'capistrano-rails', '~> 1.4', require: false
@@ -65,6 +66,8 @@ group :development do
   gem 'capistrano3-puma', github: "seuros/capistrano-puma"
   gem 'ed25519', '>= 1.2', '< 2.0'
   gem 'bcrypt_pbkdf', '>= 1.0', '< 2.0'
+  # --- Capistrano
+  
 end
 
 group :test do
