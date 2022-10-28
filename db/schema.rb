@@ -10,29 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
 ActiveRecord::Schema.define(version: 2022_10_28_143121) do
-
-  create_table "quotes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
-    t.string "building_type"
-    t.string "service_quality"
-    t.string "number_of_apartments"
-    t.string "number_of_floors"
-    t.string "number_of_businesses"
-    t.string "number_of_basements"
-    t.string "number_of_parking"
-    t.string "number_of_cages"
-    t.string "number_of_occupants"
-    t.string "number_of_hours"
-    t.string "number_of_elevators_needed"
-    t.string "price_per_unit"
-    t.string "elevator_price"
-    t.string "installation_fee"
-    t.string "final_price"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-
-ActiveRecord::Schema.define(version: 2022_10_28_135557) do
 
   create_table "active_admin_comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
     t.string "namespace"
@@ -60,6 +38,26 @@ ActiveRecord::Schema.define(version: 2022_10_28_135557) do
     t.index ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
   end
 
+  create_table "quotes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
+    t.string "building_type"
+    t.string "service_quality"
+    t.string "number_of_apartments"
+    t.string "number_of_floors"
+    t.string "number_of_businesses"
+    t.string "number_of_basements"
+    t.string "number_of_parking"
+    t.string "number_of_cages"
+    t.string "number_of_occupants"
+    t.string "number_of_hours"
+    t.string "number_of_elevators_needed"
+    t.string "price_per_unit"
+    t.string "elevator_price"
+    t.string "installation_fee"
+    t.string "final_price"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -70,7 +68,6 @@ ActiveRecord::Schema.define(version: 2022_10_28_135557) do
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
-
   end
 
 end
