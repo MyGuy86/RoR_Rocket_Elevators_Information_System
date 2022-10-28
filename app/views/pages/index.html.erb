@@ -33,7 +33,7 @@
 						# <!-- SLIDE  -->
 						<li data-transition="parallaxtobottom" data-slotamount="7" data-masterspeed="600"  data-saveperformance="off"  data-title="Slogan">
 							# <!-- MAIN IMAGE -->
-							<%= image_tag("AdobeStock_162479912.jpeg" , alt: "cover image") %>
+							<%= image_tag("AdobeStock_162479912.jpeg" , alt: "cover image" , data: {bgposition: "center top" , bgfit: "cover" , bgrepeat: "no-repeat" }) %>
 							<%# <img src="Rocket_Elevator_Assets/AdobeStock_162479912.jpeg"  alt="cover image"  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat"> %>
 
 							<div class="tp-caption white_big skewfromleft tp-resizeme"
@@ -112,14 +112,15 @@
 							data-endspeed="300"
 
 							style="z-index: 5; max-width: auto; max-height: auto; white-space: nowrap;">
-								<a class="btn btn-default btn-lg" href="quote-page.html">GET A QUOTE &nbsp; <i class="fa fa-angle-right"></i></a>
+								<a class="btn btn-default btn-lg" href="quotes">GET A QUOTE &nbsp; <i class="fa fa-angle-right"></i></a>
 						</div>
 						</li>
 
 						#<!-- SLIDE  -->
 						<li data-transition="parallaxtotop" data-slotamount="7" data-masterspeed="300"  data-saveperformance="off" data-title="Residential Buildings">
 							#<!-- MAIN IMAGE -->
-							<img src="Rocket_Elevator_Assets/AdobeStock_124493370.jpeg" alt="cover image"  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+							<%= image_tag("AdobeStock_124493370.jpeg" , alt: "cover image" , data: {bgposition: "center top" , bgfit: "cover" , bgrepeat: "no-repeat" }) %>		
+							# <img src="Rocket_Elevator_Assets/AdobeStock_124493370.jpeg" alt="cover image"  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
 							#<!-- dark overlay [0 to 9 opacity] -->
 							<div class="overlay dark-4">            </div>
 
@@ -167,13 +168,13 @@
 								data-endelementdelay="0.1"
 								data-endspeed="500"
 								style="z-index: 6; max-width: auto; max-height: auto; white-space: nowrap;">
-									<a class="btn btn-default btn-lg" href="residential.html" target="_self">Residential Services &nbsp; <i class="fa fa-angle-right"></i></a>
+									<a class="btn btn-default btn-lg" href="residential" target="_self">Residential Services &nbsp; <i class="fa fa-angle-right"></i></a>
 							</div>
 						</li>
 						# <!-- SLIDE  -->
 						<li data-transition="parallaxtotop" data-slotamount="7" data-masterspeed="300"  data-saveperformance="off" data-title="Commercial Buildings">
 							#<!-- MAIN IMAGE -->
-							<%= image_tag("AdobeStock_179073967.jpeg" , alt: "cover image") %>
+							<%= image_tag("AdobeStock_179073967.jpeg" , alt: "cover image" , data: {bgposition: "center top" , bgfit: "cover" , bgrepeat: "no-repeat" }) %>
 							<%# <img src="Rocket_Elevator_Assets/AdobeStock_179073967.jpeg" alt="cover image"  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat"> %>
 
 							<div class="overlay dark-4"><!-- dark overlay [0 to 9 opacity] --></div>
@@ -222,7 +223,7 @@
 								data-endelementdelay="0.1"
 								data-endspeed="500"
 								style="z-index: 6; max-width: auto; max-height: auto; white-space: nowrap;">
-									<a class="btn btn-default btn-lg" href="commercial.html" target="_self">Commercial Services &nbsp; <i class="fa fa-angle-right"></i></a>
+									<a class="btn btn-default btn-lg" href="commercial" target="_self">Commercial Services &nbsp; <i class="fa fa-angle-right"></i></a>
 							</div>
 						</li>
 					</ul>
@@ -269,14 +270,14 @@
 							</a>
 							<h3 class="mt-10">Residential Buildings</h3>
 							<p>From Apartments and Condos to having your own personal Elevator in your home. Rocket Elevators can take care of you.</p>
-							<a href="residential.html" class="btn btn-default">Learn More</a>
+							<a href="residential" class="btn btn-default">Learn More</a>
 						</div>
 
 						<div class="col-sm-4">
 							<%=image_tag("AdobeStock_179073967_RS.jpg" , width: "360" , height: "270" ) %>
 							<h3 class="mt-10">Commercial Buildings</h3>
 							<p>Business center or skyscraper, Rocket Elevators will keep your employees running on time.</p>
-							<a href="commercial.html" class="btn btn-default">Learn More</a>
+							<a href="commercial" class="btn btn-default">Learn More</a>
 						</div
 
 					</div>
@@ -296,7 +297,7 @@
 
 					<div class="text-center">
 						<h2 class="fs-40 fw-300">Going Up & Down Since 1976</h2>
-						<a class="btn btn-default btn-lg" href="quote-page.html">REQUEST A QUOTE <i class="fa fa-angle-right"></i></a> 
+						<a class="btn btn-default btn-lg" href="quotes">REQUEST A QUOTE <i class="fa fa-angle-right"></i></a> 
 						&nbsp; OR &nbsp; 
 						<a class="btn btn-primary btn-lg" href="#contact">CONTACT US <i class="fa fa-angle-right"></i></a>
 					</div>
@@ -849,73 +850,73 @@
 					<ul class="row clients-dotted list-inline">
 						<li class="col-md-3 col-sm-3 col-6">
 							<a href="#">			
-								<%= image_tag("logo1.png" , class: "img-fluid" , alt: "client") %>
+								<%= image_tag("logo1.png" , class: "img-fluid" , alt: "client" , width:"250", height:"375") %>
 							</a>
 						</li>
 						<li class="col-md-3 col-sm-3 col-6">
 							<a href="#">
-								<%= image_tag("logo2.png" , class: "img-fluid" , alt: "client") %>
+								<%= image_tag("logo2.png" , class: "img-fluid" , alt: "client" ,width:"250", height:"375") %>
 								<%# <img class="img-fluid" src="Rocket_Elevator_Assets/logo2.png" alt="client" /> %>
 							</a>
 						</li>
 						<li class="col-md-3 col-sm-3 col-6">
 							<a href="#">
-								<%= image_tag("logo3.png" , class: "img-fluid" , alt: "client") %>
+								<%= image_tag("logo3.png" , class: "img-fluid" , alt: "client" , width:"250", height:"375") %>
 								<%# <img class="img-fluid" src="Rocket_Elevator_Assets/logo3.png" alt="client" /> %>
 							</a>
 						</li>
 						<li class="col-md-3 col-sm-3 col-6">
 							<a href="#">
-								<%= image_tag("logo4.png" , class: "img-fluid" , alt: "client") %>
+								<%= image_tag("logo4.png" , class: "img-fluid" , alt: "client" , width:"250", height:"375") %>
 								<%# <img class="img-fluid" src="Rocket_Elevator_Assets/logo4.png" alt="client" /> %>
 							</a>
 						</li>
 						<li class="col-md-3 col-sm-3 col-6">
 							<a href="#">
 								
-								<%= image_tag("logo5.png" , class: "img-fluid" , alt: "client") %>
+								<%= image_tag("logo5.png" , class: "img-fluid" , alt: "client" , width:"250", height:"375") %>
 								<%# <img class="img-fluid" src="Rocket_Elevator_Assets/logo5.png" alt="client" /> %>
 							</a>
 						</li>
 						<li class="col-md-3 col-sm-3 col-6">
 							<a href="#">
-								<%= image_tag("logo6.png" , class: "img-fluid" , alt: "client") %>
+								<%= image_tag("logo6.png" , class: "img-fluid" , alt: "client" , width:"250", height:"375") %>
 								<%# <img class="img-fluid" src="Rocket_Elevator_Assets/logo6.png" alt="client" /> %>
 							</a>
 						</li>
 						<li class="col-md-3 col-sm-3 col-6">
 							<a href="#">
-								<%= image_tag("logo7.png" , class: "img-fluid" , alt: "client") %>
+								<%= image_tag("logo7.png" , class: "img-fluid" , alt: "client" , width:"250", height:"375") %>
 								<%# <img class="img-fluid" src="Rocket_Elevator_Assets/logo7.png" alt="client" /> %>
 							</a>
 						</li>
 						<li class="col-md-3 col-sm-3 col-6">
 							<a href="#">
-								<%= image_tag("logo8.png" , class: "img-fluid" , alt: "client") %>
+								<%= image_tag("logo8.png" , class: "img-fluid" , alt: "client" , width:"250", height:"375") %>
 								<%# <img class="img-fluid" src="Rocket_Elevator_Assets/logo8.png" alt="client" /> %>
 							</a>
 						</li>
 						<li class="col-md-3 col-sm-3 col-6">
 							<a href="#">
-								<%= image_tag("logo9.png" , class: "img-fluid" , alt: "client") %>
+								<%= image_tag("logo9.png" , class: "img-fluid" , alt: "client" , width:"250", height:"375") %>
 								<%# <img class="img-fluid" src="Rocket_Elevator_Assets/logo9.png" alt="client" /> %>
 							</a>
 						</li>
 						<li class="col-md-3 col-sm-3 col-6">
 							<a href="#">
-								<%= image_tag("logo10.png" , class: "img-fluid" , alt: "client") %>
+								<%= image_tag("logo10.png" , class: "img-fluid" , alt: "client" , width:"250", height:"375") %>
 								<%# <img class="img-fluid" src="Rocket_Elevator_Assets/logo10.png" alt="client" /> %>
 							</a>
 						</li>
 						<li class="col-md-3 col-sm-3 col-6">
 							<a href="#">
-								<%= image_tag("logo11.png" , class: "img-fluid" , alt: "client") %>
+								<%= image_tag("logo11.png" , class: "img-fluid" , alt: "client" , width:"250", height:"375") %>
 								<%# <img class="img-fluid" src="Rocket_Elevator_Assets/logo11.png" alt="client" /> %>
 							</a>
 						</li>
 						<li class="col-md-3 col-sm-3 col-6">
 							<a href="#">
-								<%= image_tag("logo12.png" , class: "img-fluid" , alt: "client") %>
+								<%= image_tag("logo12.png" , class: "img-fluid" , alt: "client" , width:"250", height:"375") %>
 								<%# <img class="img-fluid" src="Rocket_Elevator_Assets/logo12.png" alt="client" /> %>
 							</a>
 						</li>
