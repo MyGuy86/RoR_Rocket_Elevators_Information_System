@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Request A Quote</title>
+  <meta name="description" content="" />
+  <meta name="Author" content="Dorin Grigoras [www.stepofweb.com]" />
+
+  <!-- mobile settings -->
+  <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
+  <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+
+  <!-- WEB FONTS : use %7C instead of | (pipe) -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600%7CRaleway:300,400,500,600,700%7CLato:300,400,400italic,600,700" rel="stylesheet" type="text/css" />
+
+  <!-- CORE CSS -->
+  <!-- <link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" /> -->
+
+  <!-- LAYER SLIDER -->
+  <link href="assets/plugins/slider.layerslider/css/layerslider.css" rel="stylesheet" type="text/css" />
+  <link href="assets/plugins/slider.layerslider/plugins/origami/layerslider.origami.css" rel="stylesheet" type="text/css" />
+
+  <!-- THEME CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <link href="assets/css/essentials.css" rel="stylesheet" type="text/css" />
+  <link href="assets/css/layout.css" rel="stylesheet" type="text/css" />
+
+  <!-- PAGE LEVEL SCRIPTS -->
+  <link href="assets/css/header-1.css" rel="stylesheet" type="text/css" />
+  <link href="assets/css/darkblue.css" rel="stylesheet" type="text/css" id="color_scheme" />
+  <script src="quote-page-js.js" defer></script>
+</head>
+
+<!--
+  AVAILABLE BODY CLASSES:
+
+  smoothscroll 			= create a browser smooth scroll
+  enable-animation		= enable WOW animations
+
+  bg-grey					= grey background
+  grain-grey				= grey grain background
+  grain-blue				= blue grain background
+  grain-green				= green grain background
+  grain-blue				= blue grain background
+  grain-orange			= orange grain background
+  grain-yellow			= yellow grain background
+
+  boxed 					= boxed layout
+  pattern1 ... patern11	= pattern background
+  menu-vertical-hide		= hidden, open on click
+
+  BACKGROUND IMAGE [together with .boxed class]
+  data-background="assets/images/_smarty/boxed_background/1.jpg"
+-->
+<body class="smoothscroll enable-animation">
+
+
+<!-- wrapper -->
+<div id="wrapper">
+
+  <!--
+    AVAILABLE HEADER CLASSES
+
+    Default nav height: 96px
+    .header-md 		= 70px nav height
+    .header-sm 		= 60px nav height
+
+    .b-0 		= remove bottom border (only with transparent use)
+    .transparent	= transparent header
+    .translucent	= translucent header
+    .sticky			= sticky header
+    .static			= static header
+    .dark			= dark header
+    .bottom			= header on bottom
+
+    shadow-before-1 = shadow 1 header top
+    shadow-after-1 	= shadow 1 header bottom
+    shadow-before-2 = shadow 2 header top
+    shadow-after-2 	= shadow 2 header bottom
+    shadow-before-3 = shadow 3 header top
+    shadow-after-3 	= shadow 3 header bottom
+
+    .clearfix		= required for mobile menu, do not remove!
+
+    Example Usage:  class="clearfix sticky header-sm transparent b-0"
+  -->
+  <div id="header" class="navbar-toggleable-md sticky header-md clearfix">
+
+
+    <!-- SEARCH HEADER -->
+    <div class="search-box over-header">
+      <a id="closeSearch" href="#" class="fa fa-remove"></a>
+
+      <form action="page-search-result-1.html" method="get">
+        <input type="text" class="form-control" placeholder="SEARCH" />
+      </form>
+    </div>
+    <!-- /SEARCH HEADER -->
+
+
+    <!-- TOP NAV -->
+    <header id="topNav">
+      <div class="container">
+
+        <!-- Mobile Menu Button -->
+        <button class="btn btn-mobile" data-toggle="collapse" data-target=".nav-main-collapse">
+          <i class="fa fa-bars"></i>
+        </button>
+
+        <!-- BUTTONS -->
+        <ul class="float-right nav nav-pills nav-second-main">
+
+          <!-- SEARCH -->
+          <li class="search">
+            <a href="javascript:;">
+              <i class="fa fa-search"></i>
+            </a>
+          </li>
+          <!-- /SEARCH -->
+
+        </ul>
+        <!-- /BUTTONS -->
+
+        <!-- Logo -->
+        <a class="logo float-left" href="index.html">
+          <img src="Rocket_Elevator_Assets/R2.png" alt="" />
+        </a>
+
+        <!--
+          Top Nav
+
+          AVAILABLE CLASSES:
+          submenu-dark = dark sub menu
+        -->
+        <div class="navbar-collapse collapse float-right nav-main-collapse">
+          <nav class="nav-main">
+
+            <!--
+              NOTE
+
+              For a regular link, remove "dropdown" class from LI tag and "dropdown-toggle" class from the href.
+              Direct Link Example:
+
+              <li>
+                <a href="#">HOME</a>
+              </li>
+            -->
+            <ul id="topMain" class="nav nav-pills nav-main nav-onepage">
+              <li class="active"><!-- HOME -->
+                <a href="index.html">
+                  HOME
+                </a>
+              </li>
+              <li><!-- SERVICES -->
+                <a href="index.html#services">
+                  SERVICES
+                </a>
+              </li>
+              <li><!-- PORTFOLIO -->
+                <a href="index.html#portfolio">
+                  PORTFOLIO
+                </a>
+              </li>
+              <li><!-- NEWS -->
+                <a href="index.html#news">
+                  NEWS
+                </a>
+              </li>
+              <li><!-- CLIENTS -->
+                <a href="index.html#clients">
+                  CLIENTS
+                </a>
+              </li>
+              <li><!-- CONTACT -->
+                <a href="index.html#contact">
+                  CONTACT
+                </a>
+              </li>
+              </a>
+              </li>
+            </ul>
+
+          </nav>
+        </div>
+
+      </div>
+    </header>
+    <!-- /Top Nav -->
+
+  </div>
+  <div id="registration" >
+    <head>
+      <style>
+          h1 {text-align:center}
+      </style>
+      <h1>Quote Form</style></h1>
+
+    </head>
+  </div>
+
+  <body>
+  <div id="building-type" style="text-align:center">
+    <h2>What type of building do you need an elevator in?</h2>
+    <form>
+      <div class="building-type form-check-inline">
+        <input class="building-type-input" type="radio" name="building_type" id="residential" value="option1">
+        <label class="building-type-label" for="residential">Residential</label>
+      </div>
+      <div class="building-type form-check-inline">
+        <input class="building-type-input" type="radio" name="building_type" id="commercial" value="option2">
+        <label class="building-type-label" for="commercial">Commercial</label>
+      </div>
+      <div class="building-type form-check-inline">
+        <input class="building-type-input" type="radio" name="building_type" id="corporate" value="option3">
+        <label class="building-type-label" for="corporate">Corportate</label>
+      </div>
+      <div class="building-type form-check-inline">
+        <input class="building-type-input" type="radio" name="building_type" id="hybrid" value="option">
+        <label class="building-type-label" for="hybrid">Hybrid</label>
+      </div>
+    </form>
+
+  </div>
+
+  </body>
+
+  <body>
+  <div id="quality" style="text-align:center">
+    <h2>What quality of service would you like:</h2>
+    <form>
+      <div class="quality form-check-inline">
+        <input class="quality-input" type="radio" name="service_quality" id="standard" value="option1">
+        <label class="form-check-label" for="standard">Standard</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="quality-input" type="radio" name="service_quality" id="premium" value="option2">
+        <label class="form-check-label" for="premium">Premium</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="quality-input" type="radio" name="service_quality" id="excelium" value="option3">
+        <label class="form-check-label" for="excelium">Excelium</label>
+      </div>
+    </form>
+
+  </div>
+  </body>
+  <!-- INPUT QUESTIONS -->
+  <form>
+    <div class="apartment-number text-center col-md-12" >
+      <div id="apartment-number-input-container" class="mb-12" >
+        <label for="formGroupExampleInput" class="form-label">How many apartments are in the building?</label>
+        <input type="number" class="form-control" id="apartment-input" name="number_of_apartments" min="1" placeholder="0">
+      </div>
+    </div>
+    <div class="business-number col-md-12" style="text-align:center">
+      <div id="business-number-input-container" class="mb-3">
+        <label for="formGroupExampleInput" class="form-label">How many distinct businesses are in the building?</label>
+        <input type="number" class="form-control" id="business-input" name="number_of_businesses" min="1" placeholder="0">
+      </div>
+    </div>
+    <div class="floor-number col-md-12" style="text-align:center">
+      <div id="floor-number-input-container" class="mb-3">
+        <label for="formGroupExampleInput" class="form-label">How many floors are in the building?</label>
+        <input type="number" class="form-control" id="floor-input" name="number_of_floors" min="1" placeholder="0">
+      </div>
+    </div>
+    <div class="basement-number col-md-12" style="text-align:center">
+      <div id="basement-number-input-container" class="mb-3">
+        <label for="formGroupExampleInput" class="form-label">How many basement floors are in the building?</label>
+        <input type="number" class="form-control" id="basement-input" name="number_of_basements" min="0" placeholder="0">
+      </div>
+    </div>
+    <div class="parking-number col-md-12" style="text-align:center">
+      <div id="parking-number-input-container" class="mb-3">
+        <label for="formGroupExampleInput" class="form-label">How many parking spots are available?</label>
+        <input type="number" class="form-control" id="parking-input" name="number_of_parking" min="1"  placeholder="0">
+      </div>
+    </div>
+    <div class="cage-number col-md-12" style="text-align:center">
+      <div id="cage-number-input-container" class="mb-3">
+        <label for="formGroupExampleInput" class="form-label">How many elevator cages are needed?</label>
+        <input type="number" class="form-control" id="cage-input" name="number_of_cages" min="1" placeholder="0">
+      </div>
+    </div>
+    <div class="occupants-number col-md-12" style="text-align:center">
+      <div id="occupants-number-input-container" class="mb-3">
+        <label for="formGroupExampleInput" class="form-label">What is the maximum number of occupants per floor?</label>
+        <input type="number" class="form-control" id="occupants-input" name="number_of_occupants" min="1" placeholder="0">
+      </div>
+    </div>
+    <div class="hour-number col-md-12" style="text-align:center ;">
+      <div id="hour-number-input-container" class="mb-3">
+        <label for="formGroupExampleInput" class="form-label">How many hours of activity in the building per day??</label>
+        <input type="number" class="form-control" id="hour-input" name="number_of_hours" min="1" max="24" placeholder="0">
+      </div>
+    </div>
+  </form>
+
+  <br>
+  <br>
+  <!-- OUTPUTS -->
+  <div>
+    <div class= "elevators-needed col-md-12" style="text-align: center;">
+      <div id="elevators-needed-output-container"></div>
+      <label for= "Output" class="form-label"></label> The amount of elevators needed:
+      <output type="Number" class="form-control" name="number_of_elevators_needed" id="elevators-needed"></output>
+    </div>
+  </div>
+  <div>
+    <div class= "unit-price col-md-12" style="text-align: center;">
+      <div id="unit-price-output-container"></div>
+      <label for= "Output" class="form-label"></label> The unit price of each elevator:
+      <output type="Number"  class="form-control" name="price_per_unit" id="unit-price"></output>
+    </div>
+
+  </div>
+  <div>
+    <div class= "elevator-price col-md-12" style="text-align: center;">
+      <div id="elevator-price-output-container"></div>
+      <label for= "Output" class="form-label"></label> The total price of the elevators:
+      <output type="Number" class="form-control" name="elevator_price" id="elevator-price"></output>
+
+    </div>
+    <div>
+      <div class= "installation-fee col-md-12" style="text-align: center;">
+        <div id="installation-fee-output-container"></div>
+        <label for= "Output" class="form-label"></label> The installation fees:
+        <output type="Number" class="form-control" name="installation_fee" id="installation-fee"></output>
+
+      </div>
+      <div>
+        <div class= "final-price col-md-12" style="text-align: center;">
+          <div id="final-price-output-container"></div>
+          <label for= "Output" class="form-label"></label> The final price, combining the price of the elevators and the installation fees:
+          <output type="Number" class="form-control" name="final_price" id="final-price"></output>
+
+        </div>
+        <br>
+        <br>
+        <br>
+        <!-- FOOTER -->
+        <footer id="footer">
+          <div class="container">
+
+
+            <div class="row">
+
+              <!-- col #1 -->
+              <div class="col-md-">
+
+                <h3 class="letter-spacing-1">WHY US?</h3>
+
+                <!-- Small Description -->
+                <p>
+                  We will service all of your elevator wants and needs. Get up and down in style with Rocket Elevators
+                </p>
+                <h2> 1-800-887-2497</h2>
+              </div>
+              <!-- /col #1 -->
+
+              <!-- col #2 -->
+              <div class="col-md-4">
+                <h3 class="letter-spacing-1">KEEP IN TOUCH</h3>
+
+                <!-- Newsletter Form -->
+                <p>Subscribe to Our Newsletter to get Important News & Offers</p>
+
+                <form class="validate" action="php/newsletter.php" method="post" data-success="Subscribed! Thank you!" data-toastr-position="bottom-right">
+                  <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+                    <input type="email" id="email" name="email" class="form-control required" placeholder="Enter your Email">
+                    <span class="input-group-btn">
+										<button class="btn btn-primary" type="submit">Subscribe</button>
+									</span>
+                  </div>
+                </form>
+                <!-- /Newsletter Form -->
+
+
+              </div>
+              <!-- /col #2 -->
+
+            </div>
+
+
+          </div>
+
+          <div class="copyright">
+            <div class="container">
+              <ul class="float-right m-0 list-inline mobile-block">
+                <li><a href="#">Terms &amp; Conditions</a></li>
+                <li>&bull;</li>
+                <li><a href="#">Privacy</a></li>
+              </ul>
+              &copy; All Rights Reserved, Rocket Elevators LLC
+            </div>
+          </div>
+
+        </footer>
+        <!-- /FOOTER -->
+
+      </div>
+      <!-- /wrapper -->
+
+
+      <!-- SCROLL TO TOP -->
+      <a href="#" id="toTop"></a>
+
+
+      <!-- PRELOADER -->
+      <div id="preloader">
+        <div class="inner">
+          <span class="loader"></span>
+        </div>
+      </div><!-- /PRELOADER -->
+
+
+      <!-- JAVASCRIPT FILES -->
+      <script>var plugin_path = 'assets/plugins/';</script>
+      <script src="assets/plugins/jquery/jquery-3.3.1.min.js"></script>
+
+      <!-- LAYER SLIDER -->
+      <script src="assets/plugins/slider.layerslider/js/layerslider_pack.js"></script>
+      <script src="assets/plugins/slider.layerslider/plugins/origami/layerslider.origami.js"></script>
+
+      <script src="assets/js/view/demo.layerslider_slider.js"></script>
+
+      <!-- SCRIPTS -->
+      <script src="assets/js/scripts.js"></script>
+
+      <!-- STYLESWITCHER - REMOVE -->
+      <script async src="demo_files/styleswitcher/styleswitcher.js"></script>
+</body>
+</html>
