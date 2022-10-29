@@ -34,8 +34,6 @@
 						<li data-transition="parallaxtobottom" data-slotamount="7" data-masterspeed="600"  data-saveperformance="off"  data-title="Slogan">
 							<!-- MAIN IMAGE -->
 							<%= image_tag("AdobeStock_162479912.jpeg" , alt: "cover image" , data: {bgposition: "center top" , bgfit: "cover" , bgrepeat: "no-repeat" }) %>
-							<%# <img src="Rocket_Elevator_Assets/AdobeStock_162479912.jpeg"  alt="cover image"  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat"> %>
-
 							<div class="tp-caption white_big skewfromleft tp-resizeme"
 								data-x="700"
 								data-y="150" 
@@ -119,8 +117,7 @@
 						<!-- SLIDE  -->
 						<li data-transition="parallaxtotop" data-slotamount="7" data-masterspeed="300"  data-saveperformance="off" data-title="Residential Buildings">
 							<!-- MAIN IMAGE -->
-							<%= image_tag("AdobeStock_124493370.jpeg" , alt: "cover image" , data: {bgposition: "center top" , bgfit: "cover" , bgrepeat: "no-repeat" }) %>		
-							# <img src="Rocket_Elevator_Assets/AdobeStock_124493370.jpeg" alt="cover image"  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+							<%= image_tag("AdobeStock_124493370.jpeg" , alt: "cover image" , data: {bgposition: "center top" , bgfit: "cover" , bgrepeat: "no-repeat" }) %>								
 							<!-- dark overlay [0 to 9 opacity] -->
 							<div class="overlay dark-4">            </div>
 
@@ -175,10 +172,7 @@
 						<li data-transition="parallaxtotop" data-slotamount="7" data-masterspeed="300"  data-saveperformance="off" data-title="Commercial Buildings">
 							<!-- MAIN IMAGE -->
 							<%= image_tag("AdobeStock_179073967.jpeg" , alt: "cover image" , data: {bgposition: "center top" , bgfit: "cover" , bgrepeat: "no-repeat" }) %>
-							<%# <img src="Rocket_Elevator_Assets/AdobeStock_179073967.jpeg" alt="cover image"  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat"> %>
-
 							<div class="overlay dark-4"><!-- dark overlay [0 to 9 opacity] --></div>
-
 							<div class="tp-caption font-roboto skewfromleft tp-resizeme"
 								data-x="280"
 								data-y="100" 
@@ -290,7 +284,7 @@
 
 
 			 <!-- Parallax -->
-			<section class="parallax parallax-1" style="background-image: url('Rocket_Elevator_Assets/AdobeStock_33975620.jpeg');">
+			<section class="parallax parallax-1" background: url(<%= asset_path 'AdobeStock_33975620.jpeg' %>
 				<div class="overlay dark-5"><!-- dark overlay [1 to 9 opacity] --></div>
 
 				<div class="container">
@@ -342,7 +336,7 @@
 											<span class="inner">
 
 												 <!-- lightbox -->
-												<a class="ico-rounded lightbox" href="Rocket_Elevator_Assets/Carnival_2.jpg" data-plugin-options='{"type":"image"}'>
+												<a class="ico-rounded lightbox" href="Carnival_2.jpg" data-plugin-options='{"type":"image"}'>
 													<span class="fa fa-plus fs-20"></span>
 												</a>
 												
@@ -367,7 +361,7 @@
 											<span class="inner">
 
 												 <!-- lightbox -->
-												<a class="ico-rounded lightbox" href="Rocket_Elevator_Assets/elevators-in-the-empty-corridor-of-a-corporate-business-photo.jpg" data-plugin-options='{"type":"image"}'>
+												<a class="ico-rounded lightbox" href="elevators-in-the-empty-corridor-of-a-corporate-business-photo.jpg" data-plugin-options='{"type":"image"}'>
 													<span class="fa fa-plus fs-20"></span>
 												</a>
 
@@ -393,7 +387,7 @@
 											<span class="inner">
 
 												 <!-- lightbox -->
-												<a class="ico-rounded lightbox" href="Rocket_Elevator_Assets/eCatalog-upgrades.jpg" data-plugin-options='{"type":"image"}'>
+												<a class="ico-rounded lightbox" href="eCatalog-upgrades.jpg" data-plugin-options='{"type":"image"}'>
 													<span class="fa fa-plus fs-20"></span>
 												</a>
 
@@ -419,7 +413,7 @@
 											<span class="inner">
 
 												 <!-- lightbox -->
-												<a class="ico-rounded lightbox" href="Rocket_Elevator_Assets/Symmetry-with-glass-door-and-wood-interior.jpg" data-plugin-options='{"type":"image"}'>
+												<a class="ico-rounded lightbox" href="Symmetry-with-glass-door-and-wood-interior.jpg" data-plugin-options='{"type":"image"}'>
 													<span class="fa fa-plus fs-20"></span>
 												</a>
 
@@ -427,7 +421,6 @@
 										</span>
 
                     					<%= image_tag("Symmetry-with-glass-door-and-wood-interior.jpg" , width:"600", height:"399", class: "img-fluid" , alt: "") %>
-										<%# <img class="img-fluid" src="Rocket_Elevator_Assets/Symmetry-with-glass-door-and-wood-interior.jpg" width="600" height="399" alt=""> %>
 									</figure>
 
 
@@ -446,7 +439,7 @@
 											<span class="inner">
 
 												 <!-- lightbox -->
-												<a class="ico-rounded lightbox" href="Rocket_Elevator_Assets/20180730154014_55259.jpg" data-plugin-options='{"type":"image"}'>
+												<a class="ico-rounded lightbox" href="20180730154014_55259.jpg" data-plugin-options='{"type":"image"}'>
 													<span class="fa fa-plus fs-20"></span>
 												</a>
 
@@ -455,7 +448,6 @@
 										</span>
 
                     					<%= image_tag("20180730154014_55259.jpg" , width:"600", height:"399", class: "img-fluid" , alt: "") %>
-										<%# <img class="img-fluid" src="Rocket_Elevator_Assets/20180730154014_55259.jpg" width="600" height="399" alt=""> %>
 									</figure>
 
 
@@ -474,7 +466,7 @@
 											<span class="inner">
 
 												 <!-- lightbox -->
-												<a class="ico-rounded lightbox" href="Rocket_Elevator_Assets/homeelevator.jpg" data-plugin-options='{"type":"image"}'>
+												<a class="ico-rounded lightbox" href="homeelevator.jpg" data-plugin-options='{"type":"image"}'>
 													<span class="fa fa-plus fs-20"></span>
 												</a>
 
@@ -483,7 +475,6 @@
 										</span>
 
                     					<%= image_tag("homeelevator.jpg" , width:"600", height:"399", class: "img-fluid" , alt: "") %>
-										<%# <img class="img-fluid" src="Rocket_Elevator_Assets/homeelevator.jpg" width="600" height="399" alt=""> %>
 									</figure>
 
 
@@ -502,7 +493,7 @@
 											<span class="inner">
 
 												 <!-- lightbox -->
-												<a class="ico-rounded lightbox" href="Rocket_Elevator_Assets/goldele.jpg" data-plugin-options='{"type":"image"}'>
+												<a class="ico-rounded lightbox" href="goldele.jpg" data-plugin-options='{"type":"image"}'>
 													<span class="fa fa-plus fs-20"></span>
 												</a>
 
@@ -511,7 +502,6 @@
 										</span>
 
                     					<%= image_tag("goldele.jpg" , width:"600", height:"399", class: "img-fluid" , alt: "") %>
-										<%# <img class="img-fluid" src="Rocket_Elevator_Assets/goldele.jpg" width="600" height="399" alt=""> %>
 									</figure>
 
 
@@ -530,7 +520,7 @@
 											<span class="inner">
 
 												 <!-- lightbox -->
-												<a class="ico-rounded lightbox" href="Rocket_Elevator_Assets/Wildeck-Ellies-Winner.jpg" data-plugin-options='{"type":"image"}'>
+												<a class="ico-rounded lightbox" href="Wildeck-Ellies-Winner.jpg" data-plugin-options='{"type":"image"}'>
 													<span class="fa fa-plus fs-20"></span>
 												</a>
 
@@ -539,7 +529,6 @@
 										</span>
 
                     					<%= image_tag("Wildeck-Ellies-Winner.jpg" , width:"600", height:"399", class: "img-fluid" , alt: "") %>
-										<%# <img class="img-fluid" src="Rocket_Elevator_Assets/Wildeck-Ellies-Winner.jpg" width="600" height="399" alt=""> %>
 									</figure>
 
 
@@ -586,7 +575,7 @@
 											<span class="inner">
 
 												 <!-- lightbox -->
-												<a class="ico-rounded lightbox" href="Rocket_Elevator_Assets/misslesiloproject.jpg" data-plugin-options='{"type":"image"}'>
+												<a class="ico-rounded lightbox" href="misslesiloproject.jpg" data-plugin-options='{"type":"image"}'>
 													<span class="fa fa-plus fs-20"></span>
 												</a>
 
@@ -594,7 +583,6 @@
 										</span>
 
                     					<%= image_tag("misslesiloprojectRS.jpg" , width:"600", height:"399", class: "img-fluid" , alt: "") %>
-										<%# <img class="img-fluid" src="Rocket_Elevator_Assets/misslesiloprojectRS.jpg" width="600" height="399" alt=""> %>
 									</figure>
 
 
@@ -678,7 +666,7 @@
 					<div class="owl-carousel text-center owl-testimonial m-0" data-plugin-options='{"singleItem": true, "autoPlay": 3500, "navigation": false, "pagination": true, "transitionStyle":"fade"}'>
 						<div class="testimonial">
 							<figure>
-								<img class="rounded" src="Rocket_Elevator_Assets/coach_timothy.jpg" alt="" style="height:130px; width:130px"/>
+							<%= image_tag("coach_timothy.jpg" , width:"600", height:"399", class: "rounded" , alt: "") %>
 							</figure>
 							<div class="testimonial-content p-0">
 								<cite>
@@ -691,7 +679,6 @@
 						<div class="testimonial">
 							<figure>
                     			<%= image_tag("Myphoto.jpg" , width:"600", height:"399", class: "rounded" , alt: "") %>
-								<%# <img class="rounded" src="Rocket_Elevator_Assets/Myphoto.jpg" alt="" style="height:130px; width:130px"/> %>
 							</figure>
 							<div class="testimonial-content p-0">
 								<cite>
@@ -757,7 +744,6 @@
 						<div class="img-hover">
 							<a href="https://kesq.com/news/2022/09/02/worlds-tallest-outdoor-elevator-offers-views-over-avatar-landscape/">
                     			<%= image_tag("tallELEVATOR.jpg" , width:"280px", height:"210px", class: "img-fluid" , alt: "") %>
-								<%# <img class="img-fluid" src="Rocket_Elevator_Assets/tallELEVATOR.jpg" alt="" style="height: 210px; width:280px"> %>
 							</a>
 
 							<h4 class="text-left mt-20"><a href="blog-single-default.html">Giant Elevator in the Middle of No Where</a></h4>
@@ -773,7 +759,6 @@
 						<div class="img-hover">
 							<a href="https://en.wikipedia.org/wiki/Elevator">
                     			<%= image_tag("Fall-Down-Stairs-267x300.jpg" , width:"280px", height:"210px", class: "img-fluid" , alt: "") %>
-								<%# <img class="img-fluid" src="Rocket_Elevator_Assets/Fall-Down-Stairs-267x300.jpg" alt="" style="height: 210px; width: 280px"> %>
 							</a>
 
 							<h4 class="text-left mt-20"><a href="blog-single-default.html">Why you shouldn't take stairs</a></h4>
@@ -805,7 +790,6 @@
 						<div class="img-hover">
 							<a href="https://en.wikipedia.org/wiki/Elevator">
                     			<%= image_tag("SantaElevator.jpg" , width:"280px", height:"210px", class: "img-fluid" , alt: "") %>
-								<%# <img class="img-fluid" src="Rocket_Elevator_Assets/SantaElevator.jpg" alt="" style="height: 210px; width: 280px"> %>
 							</a>
 							<h4 class="text-left mt-20"><a href="blog-single-default.html">Santa using an Elevator instead of chimney</a></h4>
 							<p class="text-left">It's not a far fetched as it seems. Elevators are much more efficient than chimneys, and Santa doesn't have to worry about getting dirty</p>
@@ -820,7 +804,6 @@
 						<div class="img-hover">
 							<a href="https://en.wikipedia.org/wiki/Elevator">
                     			<%= image_tag("PrettyELe.jpg" , width:"280px", height:"210px", class: "img-fluid" , alt: "") %>
-								<%# <img class="img-fluid" src="Rocket_Elevator_Assets/PrettyELe.jpg" alt="" style="height: 210px; width: 280px"> %>
 							</a>
 							<h4 class="text-left mt-20"><a href="blog-single-default.html">Looking Back at Historical Elevators</a></h4>
 							<p class="text-left">With the 2000s behind us, we look at some hisortical elevator masterpieces</p>
