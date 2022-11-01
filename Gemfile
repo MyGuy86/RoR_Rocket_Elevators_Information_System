@@ -87,3 +87,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 	gem 'activeadmin'
 	# Plus integrations with:
 	gem 'devise'
+
+  gem 'faker'

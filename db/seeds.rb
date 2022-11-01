@@ -8,12 +8,13 @@
 AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
 
 require 'csv'
+require 'faker'
 csvfile = File.read(Rails.root.join('lib', 'seeds', 'EmployeeList.csv'))
 # CSV.read("EmployeeList.csv")
 table = CSV.parse(csvfile, headers: true)
 table.each do |row|
    EmployeeList.create!(
-        first_name: row['first_name'],
+        first_name: Faker::FunnyName.name,
         last_name: row['last_name'],
         title: row['title'],
         email: row['email'],
