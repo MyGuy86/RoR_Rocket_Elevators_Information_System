@@ -7,7 +7,7 @@ class CreateAddresses < ActiveRecord::Migration[5.2]
       t.string :NumberAndStreet
       t.string :SuiteOrApartment
       t.string :City
-      t.int :PostalCode
+      t.integer :PostalCode
       t.string :Country
       t.text :Notes
 

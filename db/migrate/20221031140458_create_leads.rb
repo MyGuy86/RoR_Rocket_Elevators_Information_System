@@ -4,7 +4,7 @@ class CreateLeads < ActiveRecord::Migration[5.2]
       t.string :FullName
       t.string :CompanyName
       t.string :EMail
-      t.int :Phone
+      t.integer :Phone
       t.string :ProjectName
       t.string :ProjectDesc
       t.string :ElevatorAdmin

@@ -1,8 +1,8 @@
 class CreateElevators < ActiveRecord::Migration[5.2]
   def change
     create_table :elevators do |t|
-      t.int :ColumnID
-      t.int :SerialNumber
+      t.integer :ColumnID
+      t.integer :SerialNumber
       t.string :Model
       t.string :Type
       t.string :Status
