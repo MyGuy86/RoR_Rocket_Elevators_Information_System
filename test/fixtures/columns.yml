@@ -1,6 +1,7 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+
   BatteryID: 
   Type: MyString
   NumOfFloorsServed: 
@@ -15,3 +16,19 @@ two:
   Status: MyString
   Information: MyText
   Notes: MyText
+=======
+  batteryid: MyString
+  type: 
+  number_of_floors: MyString
+  statues: MyString
+  information: MyString
+  notes: MyString
+
+two:
+  batteryid: MyString
+  type: 
+  number_of_floors: MyString
+  statues: MyString
+  information: MyString
+  notes: MyString
+

@@ -17,7 +17,7 @@ class QuotesController < ApplicationController
       price_per_unit: params[:price_per_unit],
       elevator_price: params[:elevator_price],
       installation_fee: params[:installation_fee],
-      final_price: params[:final_price]
+      final_price: params[:final_price],
     )
 
     redirect_to('/Quote')
