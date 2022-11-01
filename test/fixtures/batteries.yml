@@ -1,6 +1,7 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+
   BuildingID: 
   Type: MyString
   Status: MyString
@@ -21,3 +22,25 @@ two:
   OperationsCert: MyString
   Information: MyText
   Notes: MyText
+
+  buildingid: MyString
+  type: 
+  status: MyString
+  employeeid: MyString
+  dateof_commisssion: MyString
+  last_inspection_date: MyString
+  certificate_of_operations: MyString
+  information: MyString
+  notes: MyString
+
+two:
+  buildingid: MyString
+  type: 
+  status: MyString
+  employeeid: MyString
+  dateof_commisssion: MyString
+  last_inspection_date: MyString
+  certificate_of_operations: MyString
+  information: MyString
+  notes: MyString
+
