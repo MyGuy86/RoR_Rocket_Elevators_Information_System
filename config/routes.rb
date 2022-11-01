@@ -15,7 +15,7 @@ get '/commercial', to: 'pages#commercial'
 get '/quotes', to: 'pages#quotes'
 
 get '/residential', to: 'pages#residential'
-
+resources :leads
 
 
 

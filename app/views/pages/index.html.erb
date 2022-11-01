@@ -34,8 +34,6 @@
 						<li data-transition="parallaxtobottom" data-slotamount="7" data-masterspeed="600"  data-saveperformance="off"  data-title="Slogan">
 							<!-- MAIN IMAGE -->
 							<%= image_tag("AdobeStock_162479912.jpeg" , alt: "cover image" , data: {bgposition: "center top" , bgfit: "cover" , bgrepeat: "no-repeat" }) %>
-							<%# <img src="Rocket_Elevator_Assets/AdobeStock_162479912.jpeg"  alt="cover image"  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat"> %>
-
 							<div class="tp-caption white_big skewfromleft tp-resizeme"
 								data-x="700"
 								data-y="150" 
@@ -119,8 +117,7 @@
 						<!-- SLIDE  -->
 						<li data-transition="parallaxtotop" data-slotamount="7" data-masterspeed="300"  data-saveperformance="off" data-title="Residential Buildings">
 							<!-- MAIN IMAGE -->
-							<%= image_tag("AdobeStock_124493370.jpeg" , alt: "cover image" , data: {bgposition: "center top" , bgfit: "cover" , bgrepeat: "no-repeat" }) %>		
-							# <img src="Rocket_Elevator_Assets/AdobeStock_124493370.jpeg" alt="cover image"  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+							<%= image_tag("AdobeStock_124493370.jpeg" , alt: "cover image" , data: {bgposition: "center top" , bgfit: "cover" , bgrepeat: "no-repeat" }) %>								
 							<!-- dark overlay [0 to 9 opacity] -->
 							<div class="overlay dark-4">            </div>
 
@@ -175,10 +172,7 @@
 						<li data-transition="parallaxtotop" data-slotamount="7" data-masterspeed="300"  data-saveperformance="off" data-title="Commercial Buildings">
 							<!-- MAIN IMAGE -->
 							<%= image_tag("AdobeStock_179073967.jpeg" , alt: "cover image" , data: {bgposition: "center top" , bgfit: "cover" , bgrepeat: "no-repeat" }) %>
-							<%# <img src="Rocket_Elevator_Assets/AdobeStock_179073967.jpeg" alt="cover image"  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat"> %>
-
 							<div class="overlay dark-4"><!-- dark overlay [0 to 9 opacity] --></div>
-
 							<div class="tp-caption font-roboto skewfromleft tp-resizeme"
 								data-x="280"
 								data-y="100" 
@@ -290,7 +284,7 @@
 
 
 			 <!-- Parallax -->
-			<section class="parallax parallax-1" style="background-image: url('Rocket_Elevator_Assets/AdobeStock_33975620.jpeg');">
+			<section class="parallax parallax-1" background: url(<%= asset_path 'AdobeStock_33975620.jpeg' %>
 				<div class="overlay dark-5"><!-- dark overlay [1 to 9 opacity] --></div>
 
 				<div class="container">
@@ -330,310 +324,184 @@
 				</div>
 
 				<div id="portfolio" class="portfolio-nogutter">
-
 						<div class="row mix-grid">
-
 							<div class="col-md-3 col-sm-3 mix corporate">
-
 								<div class="item-box">
 									<figure>
 										<span class="item-hover">
 											<span class="overlay dark-5"></span>
 											<span class="inner">
-
 												 <!-- lightbox -->
-												<a class="ico-rounded lightbox" href="Rocket_Elevator_Assets/Carnival_2.jpg" data-plugin-options='{"type":"image"}'>
+												<a class="ico-rounded lightbox" href="Carnival_2.jpg" data-plugin-options='{"type":"image"}'>
 													<span class="fa fa-plus fs-20"></span>
-												</a>
-												
+												</a>	
 											</span>
 										</span>
-										<%=image_tag "Carnival_2.jpg" %>
-
+										<%=image_tag("Carnival_2.jpg" , width: "293" , height: "195" , class: "img-fluid" , alt: "")%>
 									</figure>
-
-	
 								</div>
-
 							</div>
-
-
 							<div class="col-md-3 col-sm-3 mix corporate">
-
 								<div class="item-box">
 									<figure>
 										<span class="item-hover">
 											<span class="overlay dark-5"></span>
 											<span class="inner">
-
 												 <!-- lightbox -->
-												<a class="ico-rounded lightbox" href="Rocket_Elevator_Assets/elevators-in-the-empty-corridor-of-a-corporate-business-photo.jpg" data-plugin-options='{"type":"image"}'>
+												<a class="ico-rounded lightbox" href="elevators-in-the-empty-corridor-of-a-corporate-business-photo.jpg" data-plugin-options='{"type":"image"}'>
 													<span class="fa fa-plus fs-20"></span>
 												</a>
-
 											</span>
 										</span>
-
-										<%=image_tag "elevators-in-the-empty-corridor-of-a-corporate-business-photo.jpg" %>
+										<%=image_tag("elevators-in-the-empty-corridor-of-a-corporate-business-photo.jpg" , width: "293" , height: "195" , class: "img-fluid" , alt: "")%>
 									</figure>
-
-
-
 								</div>
-
 							</div>
-
-
 							<div class="col-md-3 col-sm-3 mix corporate">
-
 								<div class="item-box">
 									<figure>
 										<span class="item-hover">
 											<span class="overlay dark-5"></span>
 											<span class="inner">
-
 												 <!-- lightbox -->
-												<a class="ico-rounded lightbox" href="Rocket_Elevator_Assets/eCatalog-upgrades.jpg" data-plugin-options='{"type":"image"}'>
+												<a class="ico-rounded lightbox" href="eCatalog-upgrades.jpg" data-plugin-options='{"type":"image"}'>
 													<span class="fa fa-plus fs-20"></span>
 												</a>
-
 											</span>
 										</span>
-
-										<%=image_tag "eCatalog-upgrades.jpg"%>
+										<%=image_tag("eCatalog-upgrades.jpg" , width: "293" , height: "195" , class: "img-fluid" , alt: "") %>
 									</figure>
-
-
-
 								</div>
-
 							</div>
-
-
 							<div class="col-md-3 col-sm-3 mix residential">
-
 								<div class="item-box">
 									<figure>
 										<span class="item-hover">
 											<span class="overlay dark-5"></span>
 											<span class="inner">
-
 												 <!-- lightbox -->
-												<a class="ico-rounded lightbox" href="Rocket_Elevator_Assets/Symmetry-with-glass-door-and-wood-interior.jpg" data-plugin-options='{"type":"image"}'>
+												<a class="ico-rounded lightbox" href="Symmetry-with-glass-door-and-wood-interior.jpg" data-plugin-options='{"type":"image"}'>
 													<span class="fa fa-plus fs-20"></span>
 												</a>
-
 											</span>
 										</span>
-
-                    					<%= image_tag("Symmetry-with-glass-door-and-wood-interior.jpg" , width:"600", height:"399", class: "img-fluid" , alt: "") %>
-										<%# <img class="img-fluid" src="Rocket_Elevator_Assets/Symmetry-with-glass-door-and-wood-interior.jpg" width="600" height="399" alt=""> %>
+                    					<%= image_tag("Symmetry-with-glass-door-and-wood-interior.jpg" , width: "293" , height: "195", class: "img-fluid" , alt: "") %>
 									</figure>
-
-
-
 								</div>
-
 							</div>
-
-
 							<div class="col-md-3 col-sm-3 mix projects">
-
 								<div class="item-box">
 									<figure>
 										<span class="item-hover">
 											<span class="overlay dark-5"></span>
 											<span class="inner">
-
 												 <!-- lightbox -->
-												<a class="ico-rounded lightbox" href="Rocket_Elevator_Assets/20180730154014_55259.jpg" data-plugin-options='{"type":"image"}'>
+												<a class="ico-rounded lightbox" href="20180730154014_55259.jpg" data-plugin-options='{"type":"image"}'>
 													<span class="fa fa-plus fs-20"></span>
 												</a>
-
-
 											</span>
 										</span>
-
-                    					<%= image_tag("20180730154014_55259.jpg" , width:"600", height:"399", class: "img-fluid" , alt: "") %>
-										<%# <img class="img-fluid" src="Rocket_Elevator_Assets/20180730154014_55259.jpg" width="600" height="399" alt=""> %>
+                    					<%= image_tag("20180730154014_55259.jpg" , width: "293" , height: "195", class: "img-fluid" , alt: "") %>
 									</figure>
-
-
-
 								</div>
-
 							</div>
-
-
 							<div class="col-md-3 col-sm-3 mix residential">
-
 								<div class="item-box">
 									<figure>
 										<span class="item-hover">
 											<span class="overlay dark-5"></span>
 											<span class="inner">
-
 												 <!-- lightbox -->
-												<a class="ico-rounded lightbox" href="Rocket_Elevator_Assets/homeelevator.jpg" data-plugin-options='{"type":"image"}'>
+												<a class="ico-rounded lightbox" href="homeelevator.jpg" data-plugin-options='{"type":"image"}'>
 													<span class="fa fa-plus fs-20"></span>
 												</a>
-
-
 											</span>
 										</span>
-
-                    					<%= image_tag("homeelevator.jpg" , width:"600", height:"399", class: "img-fluid" , alt: "") %>
-										<%# <img class="img-fluid" src="Rocket_Elevator_Assets/homeelevator.jpg" width="600" height="399" alt=""> %>
+                    					<%= image_tag("homeelevator.jpg" , width: "293" , height: "195", class: "img-fluid" , alt: "") %>
 									</figure>
-
-
-
 								</div>
-
 							</div>
-
-
 							<div class="col-md-3 col-sm-3 mix corporate">
-
 								<div class="item-box">
 									<figure>
 										<span class="item-hover">
 											<span class="overlay dark-5"></span>
 											<span class="inner">
-
 												 <!-- lightbox -->
-												<a class="ico-rounded lightbox" href="Rocket_Elevator_Assets/goldele.jpg" data-plugin-options='{"type":"image"}'>
+												<a class="ico-rounded lightbox" href="goldele.jpg" data-plugin-options='{"type":"image"}'>
 													<span class="fa fa-plus fs-20"></span>
 												</a>
-
-
 											</span>
 										</span>
-
-                    					<%= image_tag("goldele.jpg" , width:"600", height:"399", class: "img-fluid" , alt: "") %>
-										<%# <img class="img-fluid" src="Rocket_Elevator_Assets/goldele.jpg" width="600" height="399" alt=""> %>
+                    					<%= image_tag("goldele.jpg" , width: "293" , height: "195", class: "img-fluid" , alt: "") %>
 									</figure>
-
-
-
 								</div> 
-
 							</div>
-
-
 							<div class="col-md-3 col-sm-3 mix awards">
-
 								<div class="item-box">
 									<figure>
 										<span class="item-hover">
 											<span class="overlay dark-5"></span>
 											<span class="inner">
-
 												 <!-- lightbox -->
-												<a class="ico-rounded lightbox" href="Rocket_Elevator_Assets/Wildeck-Ellies-Winner.jpg" data-plugin-options='{"type":"image"}'>
+												<a class="ico-rounded lightbox" href="Wildeck-Ellies-Winner.jpg" data-plugin-options='{"type":"image"}'>
 													<span class="fa fa-plus fs-20"></span>
 												</a>
-
-
 											</span>
 										</span>
-
-                    					<%= image_tag("Wildeck-Ellies-Winner.jpg" , width:"600", height:"399", class: "img-fluid" , alt: "") %>
-										<%# <img class="img-fluid" src="Rocket_Elevator_Assets/Wildeck-Ellies-Winner.jpg" width="600" height="399" alt=""> %>
+                    					<%= image_tag("Wildeck-Ellies-Winner.jpg" , width: "293" , height: "195", class: "img-fluid" , alt: "") %>
 									</figure>
-
-
-
 								</div>
-
 							</div>
-							
-
 							<div class="col-md-3 col-sm-3 mix awards"><!-- item -->
-
 								<div class="item-box">
 									<figure>
 										<span class="item-hover">
 											<span class="overlay dark-5"></span>
 											<span class="inner">
-
 												 <!-- lightbox -->
-												<a class="ico-rounded lightbox" href="Rocket_Elevator_Assets/designaward.jfif" data-plugin-options='{"type":"image"}'>
+												<a class="ico-rounded lightbox" href="designaward.jfif" data-plugin-options='{"type":"image"}'>
 													<span class="fa fa-plus fs-20"></span>
 												</a>
-
-
 											</span>
 										</span>
-
-                    					<%= image_tag("designaward.jfif" , width:"600", height:"399", class: "img-fluid" , alt: "") %>
-										<%# <img class="img-fluid" src="Rocket_Elevator_Assets/designaward.jfif" width="600" height="399" alt=""> %>
+                    					<%= image_tag("designaward.jfif" , width: "293" , height: "195", class: "img-fluid" , alt: "") %>
 									</figure>
-
-
-
 								</div>
-
 							</div>
-							
-
 							<div class="col-md-3 col-sm-3 mix projects">
-
 								<div class="item-box">
 									<figure>
 										<span class="item-hover">
 											<span class="overlay dark-5"></span>
 											<span class="inner">
-
 												 <!-- lightbox -->
-												<a class="ico-rounded lightbox" href="Rocket_Elevator_Assets/misslesiloproject.jpg" data-plugin-options='{"type":"image"}'>
+												<a class="ico-rounded lightbox" href="misslesiloproject.jpg" data-plugin-options='{"type":"image"}'>
 													<span class="fa fa-plus fs-20"></span>
 												</a>
-
 											</span>
 										</span>
-
-                    					<%= image_tag("misslesiloprojectRS.jpg" , width:"600", height:"399", class: "img-fluid" , alt: "") %>
-										<%# <img class="img-fluid" src="Rocket_Elevator_Assets/misslesiloprojectRS.jpg" width="600" height="399" alt=""> %>
+                    					<%= image_tag("misslesiloprojectRS.jpg" , width: "293" , height: "195", class: "img-fluid" , alt: "") %>
 									</figure>
-
-
-
 								</div>
-
 							</div>
-							
-
 							<div class="col-md-3 col-sm-3 mix corporate">
-
 								<div class="item-box">
 									<figure>
 										<span class="item-hover">
 											<span class="overlay dark-5"></span>
 											<span class="inner">
-
 												 <!-- lightbox -->
-												<a class="ico-rounded lightbox" href="Rocket_Elevator_Assets/lobbyele.png" data-plugin-options='{"type":"image"}'>
+												<a class="ico-rounded lightbox" href="lobbyele.png" data-plugin-options='{"type":"image"}'>
 													<span class="fa fa-plus fs-20"></span>
 												</a>
-
-
 											</span>
 										</span>
-
-                    					<%= image_tag("lobbyeleRS.png" , width:"600", height:"399", class: "img-fluid" , alt: "") %>
-										<%# <img class="img-fluid" src="Rocket_Elevator_Assets/lobbyeleRS.png" width="600" height="399" alt=""> %>
+                    					<%= image_tag("lobbyeleRS.png" , width: "293" , height: "195", class: "img-fluid" , alt: "") %>
 									</figure>
-
-
-
 								</div>
-
-							</div>
-							
-
+							</div>					
 							<div class="col-md-3 col-sm-3 mix awards">
-
 								<div class="item-box">
 									<figure>
 										<span class="item-hover">
@@ -641,16 +509,12 @@
 											<span class="inner">
 
 												 <!-- lightbox -->
-												<a class="ico-rounded lightbox" href="Rocket_Elevator_Assets/Winner.png" data-plugin-options='{"type":"image"}'>
+												<a class="ico-rounded lightbox" href="Winner.png" data-plugin-options='{"type":"image"}'>
 													<span class="fa fa-plus fs-20"></span>
 												</a>
-
-
 											</span>
 										</span>
-
-                    					<%= image_tag("Winner.png" , width:"600", height:"399", class: "img-fluid" , alt: "") %>
-										<%# <img class="img-fluid" src="Rocket_Elevator_Assets/Winner.png" width="600" height="399" alt=""> %>
+                    					<%= image_tag("Winner.png" , width: "293" , height: "195", class: "img-fluid" , alt: "") %>
 									</figure>
 
 
@@ -678,7 +542,7 @@
 					<div class="owl-carousel text-center owl-testimonial m-0" data-plugin-options='{"singleItem": true, "autoPlay": 3500, "navigation": false, "pagination": true, "transitionStyle":"fade"}'>
 						<div class="testimonial">
 							<figure>
-								<img class="rounded" src="Rocket_Elevator_Assets/coach_timothy.jpg" alt="" style="height:130px; width:130px"/>
+							<%= image_tag("coach_timothy.jpg" , width:"600", height:"399", class: "rounded" , alt: "") %>
 							</figure>
 							<div class="testimonial-content p-0">
 								<cite>
@@ -691,7 +555,6 @@
 						<div class="testimonial">
 							<figure>
                     			<%= image_tag("Myphoto.jpg" , width:"600", height:"399", class: "rounded" , alt: "") %>
-								<%# <img class="rounded" src="Rocket_Elevator_Assets/Myphoto.jpg" alt="" style="height:130px; width:130px"/> %>
 							</figure>
 							<div class="testimonial-content p-0">
 								<cite>
@@ -757,7 +620,6 @@
 						<div class="img-hover">
 							<a href="https://kesq.com/news/2022/09/02/worlds-tallest-outdoor-elevator-offers-views-over-avatar-landscape/">
                     			<%= image_tag("tallELEVATOR.jpg" , width:"280px", height:"210px", class: "img-fluid" , alt: "") %>
-								<%# <img class="img-fluid" src="Rocket_Elevator_Assets/tallELEVATOR.jpg" alt="" style="height: 210px; width:280px"> %>
 							</a>
 
 							<h4 class="text-left mt-20"><a href="blog-single-default.html">Giant Elevator in the Middle of No Where</a></h4>
@@ -773,7 +635,6 @@
 						<div class="img-hover">
 							<a href="https://en.wikipedia.org/wiki/Elevator">
                     			<%= image_tag("Fall-Down-Stairs-267x300.jpg" , width:"280px", height:"210px", class: "img-fluid" , alt: "") %>
-								<%# <img class="img-fluid" src="Rocket_Elevator_Assets/Fall-Down-Stairs-267x300.jpg" alt="" style="height: 210px; width: 280px"> %>
 							</a>
 
 							<h4 class="text-left mt-20"><a href="blog-single-default.html">Why you shouldn't take stairs</a></h4>
@@ -805,7 +666,6 @@
 						<div class="img-hover">
 							<a href="https://en.wikipedia.org/wiki/Elevator">
                     			<%= image_tag("SantaElevator.jpg" , width:"280px", height:"210px", class: "img-fluid" , alt: "") %>
-								<%# <img class="img-fluid" src="Rocket_Elevator_Assets/SantaElevator.jpg" alt="" style="height: 210px; width: 280px"> %>
 							</a>
 							<h4 class="text-left mt-20"><a href="blog-single-default.html">Santa using an Elevator instead of chimney</a></h4>
 							<p class="text-left">It's not a far fetched as it seems. Elevators are much more efficient than chimneys, and Santa doesn't have to worry about getting dirty</p>
@@ -820,7 +680,6 @@
 						<div class="img-hover">
 							<a href="https://en.wikipedia.org/wiki/Elevator">
                     			<%= image_tag("PrettyELe.jpg" , width:"280px", height:"210px", class: "img-fluid" , alt: "") %>
-								<%# <img class="img-fluid" src="Rocket_Elevator_Assets/PrettyELe.jpg" alt="" style="height: 210px; width: 280px"> %>
 							</a>
 							<h4 class="text-left mt-20"><a href="blog-single-default.html">Looking Back at Historical Elevators</a></h4>
 							<p class="text-left">With the 2000s behind us, we look at some hisortical elevator masterpieces</p>
@@ -993,70 +852,7 @@
 							</div>
 
 
-							<form >
-								<fieldset>
-									<input type="hidden" name="action" value="contact_send" />
-
-									<div class="row">
-											<div class="col-md-6">
-												<label for="name">Full Name *</label>
-												<input required type="text" value="" class="form-control" name="name" id="name">
-											</div>
-											<div class="col-md-6">
-												<label for="business name">Business Name</label>
-												<input type="text" value="" class="form-control" name="name" id="name">
-											</div>
-											<div class="col-md-6">
-												<label for="email">E-mail Address *</label>
-												<input required type="email" value="" class="form-control" name="email" id="cemail">
-											</div>
-											<div class="col-md-4">
-												<label for="phone">Phone</label>
-												<input type="text" value="" class="form-control" name="phone" id="phone">
-											</div>
-									</div>
-									<div class="row">
-
-											<div class="col-md-6">
-												<label for="department">Department</label>
-												<input type="text" value="" class="form-control" name="phone" id="phone">
-											</div>
-											<div class="col-md-6">
-												<label for="subject">Project Name</label>
-												<input required type="text" value="" class="form-control" name="project name" id="project name">
-											</div>
-									</div>
-									<div class="row">
-										<div class="col-md-12">
-											<label for="message">Project Description</label>
-											<textarea maxlength="10000" rows="3" class="form-control" name="project description" id="project description"></textarea>
-										</div>
-								</div>
-									<div class="row">
-											<div class="col-md-12">
-												<label for="message">Message *</label>
-												<textarea required maxlength="10000" rows="3" class="form-control" name="message" id="message"></textarea>
-											</div>
-									</div>
-									<div class="row">
-											<div class="col-md-12">
-												<label for="attachment">File Attachment</label>
-
-												 <!-- custom file upload -->
-												<input class="custom-file-upload" type="file" id="file" name="contact[attachment]" id="contact:attachment" data-btn-text="Select a File" />
-												<small class="text-muted block">Max file size: 10Mb (zip/pdf/jpg/png)</small>
-
-											</div>
-									</div>
-
-								</fieldset>
-
-								<div class="row">
-									<div class="col-md-12">
-										<button type="submit" class="btn btn-primary"><i class="fa fa-check"></i> SEND MESSAGE</button>
-									</div>
-								</div>
-							</form>
+							<%= render "./leads/new"%>
 
 						</div>
 						 <!-- /FORM -->
