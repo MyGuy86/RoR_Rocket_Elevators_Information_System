@@ -1,6 +1,30 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+
+  ColumnID: 
+  SerialNumber: 
+  Model: MyString
+  Type: MyString
+  Status: MyString
+  CommisionDate: 2022-10-31
+  LastInspectionDate: 2022-10-31
+  InspectionCert: MyString
+  Information: MyText
+  Notes: MyText
+
+two:
+  ColumnID: 
+  SerialNumber: 
+  Model: MyString
+  Type: MyString
+  Status: MyString
+  CommisionDate: 2022-10-31
+  LastInspectionDate: 2022-10-31
+  InspectionCert: MyString
+  Information: MyText
+  Notes: MyText
+=======
   columnid: MyString
   serial_num: MyString
   model: MyString
@@ -23,3 +47,4 @@ two:
   certificate_of_inspection: MyString
   information: MyString
   notes: MyString
+
