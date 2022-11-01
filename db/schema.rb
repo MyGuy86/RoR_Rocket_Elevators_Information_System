@@ -55,13 +55,13 @@ ActiveRecord::Schema.define(version: 2022_11_01_145804) do
   create_table "batteries", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
     t.bigint "employees_id"
     t.bigint "buildings_id"
-    t.string "type"
-    t.string "status"
-    t.string "dateof_commisssion"
-    t.string "last_inspection_date"
-    t.string "certificate_of_operations"
-    t.string "information"
-    t.string "notes"
+    t.string "Type"
+    t.string "Status"
+    t.date "CommissionDate"
+    t.date "LastInspectionDate"
+    t.string "OperationsCert"
+    t.text "Information"
+    t.text "Notes"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["buildings_id"], name: "index_batteries_on_buildings_id"
@@ -70,8 +70,8 @@ ActiveRecord::Schema.define(version: 2022_11_01_145804) do
 
   create_table "building_details", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
     t.bigint "buildings_id"
-    t.string "information_key"
-    t.string "value"
+    t.string "InformationKey"
+    t.string "Value"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["buildings_id"], name: "index_building_details_on_buildings_id"
@@ -80,12 +80,12 @@ ActiveRecord::Schema.define(version: 2022_11_01_145804) do
   create_table "buildings", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
     t.bigint "address_id"
     t.bigint "customers_id"
-    t.string "building_admin"
-    t.string "admin_email"
-    t.string "admin_ph_num"
-    t.string "tc_name"
-    t.string "tc_email"
-    t.string "tc_phone"
+    t.string "FullNameOfBuildingAdmin"
+    t.string "EmailOfAdminOfBuilding"
+    t.integer "PhoneNumOfBuildingAdmin"
+    t.string "FullNameOfTechContactForBuilding"
+    t.string "TechContactEmailForBuilding"
+    t.integer "TechContactPhoneForBuilding"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["address_id"], name: "index_buildings_on_address_id"
@@ -94,11 +94,11 @@ ActiveRecord::Schema.define(version: 2022_11_01_145804) do
 
   create_table "columns", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
     t.bigint "batteries_id"
-    t.string "type"
-    t.string "number_of_floors"
-    t.string "statues"
-    t.string "information"
-    t.string "notes"
+    t.string "Type"
+    t.integer "NumOfFloorsServed"
+    t.string "Status"
+    t.text "Information"
+    t.text "Notes"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["batteries_id"], name: "index_columns_on_batteries_id"
@@ -106,32 +106,44 @@ ActiveRecord::Schema.define(version: 2022_11_01_145804) do
 
   create_table "customers", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
     t.bigint "users_id"
-    t.string "customers_creation_date"
-    t.string "company_name"
-    t.string "company_headquarters_address"
-    t.string "company_contact"
-    t.string "contact_phone_number"
-    t.string "contact_email"
-    t.string "company_description"
-    t.string "sta_name"
-    t.string "ta_phone"
-    t.string "tm_email"
+    t.string "CustomerCreationDate"
+    t.string "date"
+    t.string "CompanyName"
+    t.string "CompanyHQAdress"
+    t.string "FullNameOfCompanyContact"
+    t.string "CompanyContactPhone"
+    t.string "CompanyContactEMail"
+    t.text "CompanyDesc"
+    t.string "FullNameServiceTechAuth"
+    t.string "TechAuthPhoneService"
+    t.string "TechManagerEmailService"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["users_id"], name: "index_customers_on_users_id"
   end
 
+  create_table "dim_customers", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
+    t.date "CreationDate"
+    t.string "CompanyName"
+    t.string "FullNameOfCompanyMainContact"
+    t.string "EmailOfCompanyMainContact"
+    t.string "NbElevators"
+    t.string "CustomerCity"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "elevators", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
     t.bigint "columns_id"
-    t.string "serial_num"
-    t.string "model"
-    t.string "type"
-    t.string "status"
-    t.string "dateof_commission"
-    t.string "dateof_last_inspection"
-    t.string "certificate_of_inspection"
-    t.string "information"
-    t.string "notes"
+    t.integer "SerialNumber"
+    t.string "Model"
+    t.string "Type"
+    t.string "Status"
+    t.date "CommisionDate"
+    t.date "LastInspectionDate"
+    t.string "InspectionCert"
+    t.text "Information"
+    t.text "Notes"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["columns_id"], name: "index_elevators_on_columns_id"
@@ -142,6 +154,36 @@ ActiveRecord::Schema.define(version: 2022_11_01_145804) do
     t.string "last_name"
     t.string "title"
     t.string "email"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "fact_contacts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
+    t.integer "ContactID"
+    t.date "CreationDate"
+    t.string "CompanyName"
+    t.string "Email"
+    t.string "ProjectName"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "fact_elevators", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
+    t.integer "SerialNumber"
+    t.date "CommisionDate"
+    t.integer "BuildingId"
+    t.integer "CustomerID"
+    t.string "BuildingCity"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "fact_quotes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
+    t.integer "QuoteID"
+    t.date "Creation"
+    t.string "CompanyName"
+    t.string "Email"
+    t.integer "NbElevator"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

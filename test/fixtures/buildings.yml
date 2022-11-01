@@ -1,6 +1,26 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+
+  CustomerID: 
+  AddressOfBuilding: MyString
+  FullNameOfBuildingAdmin: MyString
+  EmailOfAdminOfBuilding: MyString
+  PhoneNumOfBuildingAdmin: 
+  FullNameOfTechContactForBuilding: MyString
+  TechContactEmailForBuildling: MyString
+  TechContactPhoneForBuilding: 
+
+two:
+  CustomerID: 
+  AddressOfBuilding: MyString
+  FullNameOfBuildingAdmin: MyString
+  EmailOfAdminOfBuilding: MyString
+  PhoneNumOfBuildingAdmin: 
+  FullNameOfTechContactForBuilding: MyString
+  TechContactEmailForBuildling: MyString
+  TechContactPhoneForBuilding: 
+
   customerid: MyString
   building_address: MyString
   building_admin: MyString
@@ -19,3 +39,4 @@ two:
   tc_name: MyString
   tc_email: MyString
   tc_phone: MyString
+
