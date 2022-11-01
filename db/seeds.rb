@@ -7,7 +7,10 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-	require 'csv'
+
+
+
+require 'csv'
 	    CSV.foreach("app/models/Employee List - Employee List.csv", :quote_char => "|",headers: true,encoding:"ISO-8859-1:utf-8") do |row|
 	        Employee.create!(row.to_hash)
 	    end
@@ -54,7 +57,7 @@ Quote.create!(
     number_of_cages: "number_of_cages"
     number_of_occupants: "number_of_occupants"
     number_of_hours:Faker::Number.within(range: 1..24)
-    number_of_elevators_needed:
+    number_of_elevators_needed: 
     price_per_unit:
     elevator_price:
     installation_fee:
