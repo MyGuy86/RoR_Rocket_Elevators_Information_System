@@ -10,9 +10,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_11_01_145804) do
 
-  create_table "active_admin_comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
+  create_table "active_admin_comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "namespace"
     t.text "body"
     t.string "resource_type"
@@ -25,6 +24,8 @@ ActiveRecord::Schema.define(version: 2022_11_01_145804) do
     t.index ["namespace"], name: "index_active_admin_comments_on_namespace"
     t.index ["resource_type", "resource_id"], name: "index_active_admin_comments_on_resource_type_and_resource_id"
   end
+
+
 
   create_table "addresses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
     t.string "address_type"
@@ -41,6 +42,7 @@ ActiveRecord::Schema.define(version: 2022_11_01_145804) do
   end
 
   create_table "admin_users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
+
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
@@ -51,6 +53,9 @@ ActiveRecord::Schema.define(version: 2022_11_01_145804) do
     t.index ["email"], name: "index_admin_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
   end
+
+
+  create_table "employees", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
 
   create_table "batteries", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
     t.bigint "employees_id"
@@ -146,23 +151,25 @@ ActiveRecord::Schema.define(version: 2022_11_01_145804) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "leads", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
-    t.string "full_name"
-    t.string "company_name"
-    t.string "email"
-    t.string "phone"
-    t.string "project_name"
-    t.string "project_description"
-    t.string "string"
-    t.string "dept_in_charge"
-    t.string "message"
-    t.string "attached_file"
-    t.string "doc"
+
+  create_table "leads", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.string "Full_name_of_the_contact"
+    t.string "Bussiness_name"
+    t.string "Email"
+    t.string "Phone"
+    t.string "Project_name"
+    t.string "Project_description"
+    t.string "Department_incharge"
+    t.string "Message"
+    t.string "Attached_file"
+
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
+
   create_table "quotes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
+
     t.string "building_type"
     t.string "service_quality"
     t.string "number_of_apartments"
@@ -182,7 +189,7 @@ ActiveRecord::Schema.define(version: 2022_11_01_145804) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
+  create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
