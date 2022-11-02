@@ -1,13 +1,11 @@
 # Rocket_Elevators_Information_System
 Initial Password: password 
+Xinqi:
+1. Tables are add to admin. but application_record table is not in the adminpanel 
+error: ApplicationRecord is an abstract class and cannot be instantiated. (NotImplementedError)
 
 
 
-Login:
-admin@gmail.com
-password
-
-Please note : Employees list can login in with their email and default pasword
 
 This project is making me cry
 
