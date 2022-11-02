@@ -17,9 +17,7 @@ gem 'mysql2'
 
 gem 'pg'
 
-gem 'faker', '~> 1.6', '>= 1.6.6'
 
-gem 'secondbase', '~> 2.1'
 # Use Puma as the app server
 # gem 'puma', '~> 4.3.11'
 gem 'puma', '~> 4.3.11'
