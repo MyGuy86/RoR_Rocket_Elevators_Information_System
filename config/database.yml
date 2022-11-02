@@ -11,11 +11,11 @@
 #
 default: &default
   adapter: mysql2
-  socket: /var/run/mysqld/mysqld.sock
+  
   encoding: utf8
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: root
-  password: password
+  username: 
+  password: 
   host: localhost
  
 
@@ -30,19 +30,7 @@ test:
   <<: *default
   database: myapp_test
 
-secondbase:
 
-  default: &default
-    username: postgres
-    password: password
-
-  development:
-    adapter: postgresql
-    database: myapp_development
-    
-  test:
-    adapter: postgresql
-    database: myapp_test
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
