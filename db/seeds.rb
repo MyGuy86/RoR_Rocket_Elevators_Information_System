@@ -36,13 +36,25 @@ end
 puts "//***********Address Table seeded with #{Address.count} records*********"
 
 require 'csv'
-	CSV.foreach("lib/EmployeeList.csv", :quote_char => "|",headers: true,encoding:"ISO-8859-1:utf-8") do |row|
-		Employee.create!(row.to_hash)
-	end
-
-
-
-AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
+	csvfile = File.read(Rails.root.join('lib', 'Employee_List.csv'))
+	table = CSV.parse(csvfile, headers: true)
+	table.each do |row|
+    	Employee.create!(
+        last_name: row['last_name'],
+        title: row['title'],
+        first_name: row['first_name'],
+        email: row['email'],
+    )
+    User.create(
+        email: row['email'],
+        password: 'password',
+    )
+    AdminUser.create(
+        email: row['email'],
+        password: 'password',
+    )
+end
+	
 
 # require 'csv'
 # csvfile = File.read(Rails.root.join('lib', 'seeds', 'EmployeeList.csv'))
@@ -73,22 +85,22 @@ require 'faker'
 end 
  puts "*(*******************seededlead:db ********************* "
 
-# Quote.create!(
-# 	building_type: ['residential', 'corporate', 'hybrid', 'commercial'].sample,
-#     service_quality:['standard', 'premium', 'excelium'].sample ,
-#     number_of_apartments: "number_of_apartments",
-#     number_of_floors: "number_of_floors",
-#     number_of_businesses: "number_of_businesses",
-#     number_of_basements: "number_of_basements",
-#     number_of_parking: "number_of_parking",
-#     number_of_cages: "number_of_cages",
-#     number_of_occupants: "number_of_occupants",
-#     number_of_hours:Faker::Number.within(range: 1..24),
-#     number_of_elevators_needed:,
-#     price_per_unit:,
-#     elevator_price:,
-#     installation_fee:,
-#     final_price:,
-# )
+Quote.create!(
+	building_type: ['residential', 'corporate', 'hybrid', 'commercial'].sample,
+    service_quality:['standard', 'premium', 'excelium'].sample ,
+    number_of_apartments: "number_of_apartments",
+    number_of_floors: "number_of_floors",
+    number_of_businesses: "number_of_businesses",
+    number_of_basements: "number_of_basements",
+    number_of_parking: "number_of_parking",
+    number_of_cages: "number_of_cages",
+    number_of_occupants: "number_of_occupants",
+    number_of_hours:Faker::Number.within(range: 1..24),
+    number_of_elevators_needed:,
+    price_per_unit:,
+    elevator_price:,
+    installation_fee:,
+    final_price:,
+)
 
-# end
+end
