@@ -56,16 +56,16 @@ end
 # puts "*(*******************seededlead:db ********************* "
 
 Quote.create!(
-	building_type: ['residential', 'corporate', 'hybrid', 'commercial'].sample
-    service_quality:['standard', 'premium', 'excelium'].sample 
-    number_of_apartments: "number_of_apartments"
-    number_of_floors: "number_of_floors"
-    number_of_businesses: "number_of_businesses"
-    number_of_basements: "number_of_basements"
-    number_of_parking: "number_of_parking"
-    number_of_cages: "number_of_cages"
-    number_of_occupants: "number_of_occupants"
-    number_of_hours:Faker::Number.within(range: 1..24)
+	building_type: ['residential', 'corporate', 'hybrid', 'commercial'].sample,
+    service_quality:['standard', 'premium', 'excelium'].sample,
+    number_of_apartments: "number_of_apartments",
+    number_of_floors: "number_of_floors",
+    number_of_businesses: "number_of_businesses",
+    number_of_basements: "number_of_basements",
+    number_of_parking: "number_of_parking",
+    number_of_cages: "number_of_cages",
+    number_of_occupants: "number_of_occupants",
+    number_of_hours:Faker::Number.within(range: 1..24),
     number_of_elevators_needed:
     price_per_unit:
     elevator_price:
