@@ -8,7 +8,7 @@
  <br>
  <br>
 <form action="/quotes" method="post" accept-charset="UTF-8" >
-
+<fieldset id="fieldset">
 
   <div id="building-type" style="text-align:center">
     <h2>What type of building do you need an elevator in?</h2>
@@ -141,10 +141,10 @@
       </div>
       <div>
         <div class= "final-price col-md-12" style="text-align: center;">
-          <div id="final-price-output-container"></div>
+          <div id="final-price-output-container">
           <label for= "Output" class="form-label"></label> The final price, combining the price of the elevators and the installation fees:
-          <output type="Number" class="form-control" name="final_price" id="final-price"></output>
-
+          <output type="Number" class="form-control" name="final_price" id="final-price" readonly></output>
+          </div>
         </div>
         <br>
         <br>
@@ -154,10 +154,11 @@
       </div>
 <div class="row">
 									<div class="col-md-12">
-										<button type="submit" class="btn btn-primary"><i class="fa fa-check"></i> SEND MESSAGE</button>
+										<input type="submit" class="btn btn-primary"><i class="fa fa-check"></i>
 									</div>
 								</div>
       <!-- /wrapper -->
+      </fieldset>
 </form>
 
       <!-- SCROLL TO TOP -->
@@ -174,19 +175,19 @@
 
 
 <!-- JAVASCRIPT FILES -->
-<script>var plugin_path = 'assets/plugins/';</script>
-<script src="assets/plugins/jquery/jquery-3.3.1.min.js"></script>
+<%# <script>var plugin_path = 'assets/plugins/';</script>
+<script src="assets/plugins/jquery/jquery-3.3.1.min.js"></script> %>
 
 <!-- LAYER SLIDER -->
-<script src="assets/plugins/slider.layerslider/js/layerslider_pack.js"></script>
+<%# <script src="assets/plugins/slider.layerslider/js/layerslider_pack.js"></script>
 <script src="assets/plugins/slider.layerslider/plugins/origami/layerslider.origami.js"></script>
 
-<script src="assets/js/view/demo.layerslider_slider.js"></script>
+<script src="assets/js/view/demo.layerslider_slider.js"></script> %>
 
 <!-- SCRIPTS -->
-<script src="assets/js/scripts.js"></script>
+<%# <script src="assets/js/scripts.js"></script> %>
 
 <!-- STYLESWITCHER - REMOVE -->
-<script async src="demo_files/styleswitcher/styleswitcher.js"></script>
+<%# <script async src="demo_files/styleswitcher/styleswitcher.js"></script> %>
 </body>
 </html>
