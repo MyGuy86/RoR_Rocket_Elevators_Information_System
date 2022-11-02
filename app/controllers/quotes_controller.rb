@@ -1,6 +1,8 @@
 # frozen_string_literal: true
-
+  
 class QuotesController < ApplicationController
+  # skip_before_action :verify_authenticity_token
+  protect_from_forgery 
   def create
     Quote.create!(
       building_type: params[:building_type],
@@ -17,9 +19,9 @@ class QuotesController < ApplicationController
       price_per_unit: params[:price_per_unit],
       elevator_price: params[:elevator_price],
       installation_fee: params[:installation_fee],
-      final_price: params[:final_price],
+      final_price: params[:final_price]
     )
-
-    redirect_to('/Quote')
+    redirect_to('/quotes')
+   
   end
 end

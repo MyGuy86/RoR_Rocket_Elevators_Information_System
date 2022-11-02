@@ -1,6 +1,6 @@
 class Battery < ApplicationRecord
 
-    belong_to :employee
-    belong_to :building
+    belongs_to :employee
+    belongs_to :building
     has_many :column
 end

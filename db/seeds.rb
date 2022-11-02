@@ -8,23 +8,57 @@
 
 
 #load and parse json file
-address_text = File.read(Rails.root.join('lib', 'seeds', 'address.json'));
-address_parse = JSON.parse(address_text);
+jsonFile = File.read(Rails.root.join('lib', 'Addresses.json'));
+address_parse = JSON.parse(jsonFile);
 #create random array
 randomarray = Array.new(address_parse['addresses'].count - 1) {|e| e += 1};
 arandom = randomarray.shuffle;
 address_counter = 0;
 
+(address_parse['addresses'].count -1).times do
+	thisaddress = address_parse['addresses'][arandom[address_counter]]
+	Address.create!(
+		address_type: ["Home", "Business", "Shipping", "Billing"].sample,
+		staus: ["verified", "unverified"].sample,
+		entity: ["Business", "Personal"].sample,
+		number_and_street: thisaddress["address1"],
+		suite_or_apartment: thisaddress["address2"],
+		city: thisaddress["city"],
+		postal_code: thisaddress["postalCode"],
+		country: "murica",
+		notes: Faker::TvShows::SouthPark.quote
+	)
 
+	address_counter += 1
+
+end
+
+puts "//***********Address Table seeded with #{Address.count} records*********"
 
 require 'csv'
-	CSV.foreach("lib/EmployeeList.csv", :quote_char => "|",headers: true,encoding:"ISO-8859-1:utf-8") do |row|
-		Employee.create!(row.to_hash)
-	end
+	csvfile = File.read(Rails.root.join('lib', 'seeds','EmployeeList.csv'))
+	csvfile = File.read(Rails.root.join('lib', 'EmployeeList.csv'))
 
-
-
-AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
+	table = CSV.parse(csvfile, headers: true)
+	table.each do |row|
+    	
+    	User.create(
+        email: row['email'],
+        password: 'password',
+    )
+		Employee.create!(
+			# user_id:
+        last_name: row['last_name'],
+        title: row['title'],
+        first_name: row['first_name'],
+        email: row['email'],
+    )
+    	AdminUser.create(
+        email: row['email'],
+        password: 'password',
+    )
+end
+	
 
 require 'csv'
 csvfile = File.read(Rails.root.join('lib', 'seeds', 'EmployeeList.csv'))
@@ -59,7 +93,8 @@ require 'faker'
 		 Attached_file: "fix later",
 	)
 end 
-# puts "*(*******************seededlead:db ********************* "
+ puts "*(*******************seededlead:db ********************* "
+
 
 
 
@@ -177,3 +212,24 @@ end
 
 
 puts "*(*******************seededquote:db ********************* "
+=======
+# Quote.create!(
+# 	building_type: ['residential', 'corporate', 'hybrid', 'commercial'].sample,
+#     service_quality:['standard', 'premium', 'excelium'].sample ,
+#     number_of_apartments: "number_of_apartments",
+#     number_of_floors: "number_of_floors",
+#     number_of_businesses: "number_of_businesses",
+#     number_of_basements: "number_of_basements",
+#     number_of_parking: "number_of_parking",
+#     number_of_cages: "number_of_cages",
+#     number_of_occupants: "number_of_occupants",
+#     number_of_hours:Faker::Number.within(range: 1..24),
+#     number_of_elevators_needed:,
+#     price_per_unit:,
+#     elevator_price:,
+#     installation_fee:,
+#     final_price:,
+# )
+
+# end
+
