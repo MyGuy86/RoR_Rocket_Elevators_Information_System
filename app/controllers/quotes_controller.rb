@@ -1,6 +1,7 @@
 # frozen_string_literal: true
-
+  
 class QuotesController < ApplicationController
+  protect_from_forgery
   def create
     Quote.create!(
       building_type: params[:building_type],
@@ -20,6 +21,6 @@ class QuotesController < ApplicationController
       final_price: params[:final_price],
     )
 
-    redirect_to('/Quote')
+   
   end
 end
