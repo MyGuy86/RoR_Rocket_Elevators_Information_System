@@ -60,24 +60,6 @@ require 'csv'
 end
 	
 
-require 'csv'
-csvfile = File.read(Rails.root.join('lib', 'seeds', 'EmployeeList.csv'))
-# CSV.read("EmployeeList.csv")
-table = CSV.parse(csvfile, headers: true)
-table.each do |row|
-   EmployeeList.create!(
-        first_name: Faker::FunnyName.name,
-        last_name: row['last_name'],
-        title: row['title'],
-        email: row['email'],
-#     )
-# # end
-
-
-
-
-
-
 
 require 'faker'
 100.times do 
