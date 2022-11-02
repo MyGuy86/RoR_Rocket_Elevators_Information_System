@@ -7,12 +7,12 @@
  <br>
  <br>
  <br>
-
-
+<form action="/quotes" method="post" accept-charset="UTF-8" >
+<fieldset id="fieldset">
 
   <div id="building-type" style="text-align:center">
     <h2>What type of building do you need an elevator in?</h2>
-    <form>
+    
       <div class="building-type form-check-inline">
         <input class="building-type-input" type="radio" name="building_type" id="residential" value="option1">
         <label class="building-type-label" for="residential">Residential</label>
@@ -29,16 +29,16 @@
         <input class="building-type-input" type="radio" name="building_type" id="hybrid" value="option">
         <label class="building-type-label" for="hybrid">Hybrid</label>
       </div>
-    </form>
+ 
 
   </div>
 
-  </div>
 
-  <body>
+
+ 
   <div id="quality" style="text-align:center">
     <h2>What quality of service would you like:</h2>
-    <form>
+  
       <div class="quality form-check-inline">
         <input class="quality-input" type="radio" name="service_quality" id="standard" value="option1">
         <label class="form-check-label" for="standard">Standard</label>
@@ -51,12 +51,12 @@
         <input class="quality-input" type="radio" name="service_quality" id="excelium" value="option3">
         <label class="form-check-label" for="excelium">Excelium</label>
       </div>
-    </form>
+
 
   </div>
-  </body>
+ 
   <!-- INPUT QUESTIONS -->
-  <form>
+ 
     <div class="apartment-number text-center col-md-12" >
       <div id="apartment-number-input-container" class="mb-12" >
         <label for="formGroupExampleInput" class="form-label">How many apartments are in the building?</label>
@@ -105,7 +105,7 @@
         <input type="number" class="form-control" id="hour-input" name="number_of_hours" min="1" max="24" placeholder="0">
       </div>
     </div>
-  </form>
+
 
   <br>
   <br>
@@ -141,10 +141,10 @@
       </div>
       <div>
         <div class= "final-price col-md-12" style="text-align: center;">
-          <div id="final-price-output-container"></div>
+          <div id="final-price-output-container">
           <label for= "Output" class="form-label"></label> The final price, combining the price of the elevators and the installation fees:
-          <output type="Number" class="form-control" name="final_price" id="final-price"></output>
-
+          <output type="Number" class="form-control" name="final_price" id="final-price" readonly></output>
+          </div>
         </div>
         <br>
         <br>
@@ -152,11 +152,18 @@
 
 
       </div>
+<div class="row">
+									<div class="col-md-12">
+										<input type="submit" class="btn btn-primary"><i class="fa fa-check"></i>
+									</div>
+								</div>
       <!-- /wrapper -->
-
+      </fieldset>
+</form>
 
       <!-- SCROLL TO TOP -->
       <a href="#" id="toTop"></a>
+
 
 
 <!-- PRELOADER
@@ -168,19 +175,19 @@
 
 
 <!-- JAVASCRIPT FILES -->
-<script>var plugin_path = 'assets/plugins/';</script>
-<script src="assets/plugins/jquery/jquery-3.3.1.min.js"></script>
+<%# <script>var plugin_path = 'assets/plugins/';</script>
+<script src="assets/plugins/jquery/jquery-3.3.1.min.js"></script> %>
 
 <!-- LAYER SLIDER -->
-<script src="assets/plugins/slider.layerslider/js/layerslider_pack.js"></script>
+<%# <script src="assets/plugins/slider.layerslider/js/layerslider_pack.js"></script>
 <script src="assets/plugins/slider.layerslider/plugins/origami/layerslider.origami.js"></script>
 
-<script src="assets/js/view/demo.layerslider_slider.js"></script>
+<script src="assets/js/view/demo.layerslider_slider.js"></script> %>
 
 <!-- SCRIPTS -->
-<script src="assets/js/scripts.js"></script>
+<%# <script src="assets/js/scripts.js"></script> %>
 
 <!-- STYLESWITCHER - REMOVE -->
-<script async src="demo_files/styleswitcher/styleswitcher.js"></script>
+<%# <script async src="demo_files/styleswitcher/styleswitcher.js"></script> %>
 </body>
 </html>
