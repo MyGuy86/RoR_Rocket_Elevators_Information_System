@@ -37,6 +37,8 @@ puts "//***********Address Table seeded with #{Address.count} records*********"
 
 require 'csv'
 	csvfile = File.read(Rails.root.join('lib', 'seeds','EmployeeList.csv'))
+	csvfile = File.read(Rails.root.join('lib', 'EmployeeList.csv'))
+
 	table = CSV.parse(csvfile, headers: true)
 	table.each do |row|
     	
