@@ -1,6 +1,6 @@
 class Customer < ApplicationRecord
 
-    belong_to :user
+    belongs_to :user
     has_one :building
-    belong_to :address
+    belongs_to :address
 end
