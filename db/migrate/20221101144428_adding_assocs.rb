@@ -5,6 +5,8 @@ class AddingAssocs < ActiveRecord::Migration[5.2]
     add_reference :building_details, :buildings, foreign_key: true, first: true
     add_reference :columns, :batteries, foreign_key: true, first: true
     add_reference :customers, :users, foreign_key: true, first: true
+    add_reference :employees, :user, foreign_key: true, first: true
+
     add_reference :elevators, :columns, foreign_key: true, first: true
   end
 end
