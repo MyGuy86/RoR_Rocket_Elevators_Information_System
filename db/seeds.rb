@@ -36,13 +36,6 @@ end
 puts "//***********Address Table seeded with #{Address.count} records*********"
 
 
-
-
-
-
-
-
-
 require 'faker'
 100.times do 
 	Lead.create!(
@@ -83,4 +76,27 @@ end
 
 
 # puts "*(*******************seededquote:db ********************* "
+require 'faker'
+50.times do
+	Quote.create!(
+		building_type: ["residential", "corporate", "hybrid", "commercial"].sample,
+		service_quality:["standard", "premium", "excelium"].sample, 
+		number_of_apartments: Faker::Number.between(from: 40, to: 350),
+		number_of_floors: Faker::Number.number(digits: 2),
+		number_of_businesses: Faker::Number.number(digits: 2),
+		number_of_basements: Faker::Number.non_zero_digit, 
+		number_of_parking: Faker::Number.number(digits: 3),
+		number_of_cages: Faker::Number.number(digits: 2),
+		number_of_occupants: Faker::Number.number(digits: 4),
+		number_of_hours: Faker::Number.within(range: 1..24),
+		number_of_elevators_needed: Faker::Number.number(digits: 2),
+		price_per_unit: Faker::Number.decimal(l_digits: 2), 
+		elevator_price: Faker::Number.decimal(l_digits: 3, r_digits: 2),
+		installation_fee: Faker::Number.decimal(l_digits: 3, r_digits: 2),
+		final_price: Faker::Number.decimal(l_digits: 4, r_digits: 2),
+
+	)
+end
+
+
 
