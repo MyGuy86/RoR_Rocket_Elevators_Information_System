@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_11_01_145804) do
+ActiveRecord::Schema.define(version: 2022_11_03_172625) do
 
   create_table "active_admin_comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
     t.string "namespace"
@@ -105,6 +105,7 @@ ActiveRecord::Schema.define(version: 2022_11_01_145804) do
   end
 
   create_table "customers", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
+    t.bigint "address_id"
     t.bigint "users_id"
     t.string "CustomerCreationDate"
     t.string "date"
@@ -119,6 +120,7 @@ ActiveRecord::Schema.define(version: 2022_11_01_145804) do
     t.string "TechManagerEmailService"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["address_id"], name: "index_customers_on_address_id"
     t.index ["users_id"], name: "index_customers_on_users_id"
   end
 
@@ -150,12 +152,14 @@ ActiveRecord::Schema.define(version: 2022_11_01_145804) do
   end
 
   create_table "employees", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
+    t.bigint "user_id"
     t.string "first_name"
     t.string "last_name"
     t.string "title"
     t.string "email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_employees_on_user_id"
   end
 
   create_table "fact_contacts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
@@ -240,6 +244,8 @@ ActiveRecord::Schema.define(version: 2022_11_01_145804) do
   add_foreign_key "buildings", "addresses"
   add_foreign_key "buildings", "customers", column: "customers_id"
   add_foreign_key "columns", "batteries", column: "batteries_id"
+  add_foreign_key "customers", "addresses"
   add_foreign_key "customers", "users", column: "users_id"
   add_foreign_key "elevators", "columns", column: "columns_id"
+  add_foreign_key "employees", "users"
 end

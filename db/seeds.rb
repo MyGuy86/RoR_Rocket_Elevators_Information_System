@@ -33,7 +33,74 @@ address_counter = 0;
 
 end
 
-# puts "//***********Address Table seeded with #{Address.count} records*********"
+
+require 'csv'
+	csvfile = File.read(Rails.root.join('lib', 'seeds','EmployeeList.csv'))
+	# csvfile = File.read(Rails.root.join('lib', 'EmployeeList.csv'))
+
+	table = CSV.parse(csvfile, headers: true)
+	table.each do |row|
+    	
+    	user = User.create(
+        	email: row['email'],
+       		password: 'password',
+    	)
+	
+		Employee.create!(
+			user: user,
+        	last_name: row['last_name'],
+        	title: row['title'],
+        	first_name: row['first_name'],
+        	email: row['email'],
+    	)
+    	AdminUser.create(
+        	email: row['email'],
+        	password: 'password',
+    	)
+end
+
+# record = Address.first.id
+counter = 1
+45.times do
+    user = User.create!(
+        email: Faker::Internet.email,
+        password: 'password',
+    )
+    Customer.create!(
+        user: user,
+        customer_creation_date: Faker::Date.between(from: 3.years.ago, to: Date.today),
+        company_name: (Faker::Company.name + Faker::Company.suffix),
+        address_id: counter,
+        contact_full_name: Faker::Name.unique.name,
+        company_contact_phone: Faker::PhoneNumber.cell_phone,
+        company_contact_email: Faker::Internet.email,
+        service_tech_full_name: Faker::Name.unique.name,
+        service_tech_phone: Faker::PhoneNumber.cell_phone,
+        tech_manager_email: Faker::Internet.email,
+    )
+    counter += 1
+end
+
+
+# puts "//***************Customer Table seeded with #{Customer.count} records*****************"
+
+
+Customer.all.each do |cust|
+rand(1..4).times do
+    Building.create!(
+        customer: cust,
+        address_id: record + counter,
+        admin_full_name: Faker::Name.unique.name,
+        admin_email: Faker::Internet.email,
+        admin_phone: Faker::PhoneNumber.cell_phone,
+        tech_contact_full_name: Faker::Name.unique.name,
+        tech_contact_email: Faker::Internet.email,
+        tech_contact_phone: Faker::PhoneNumber.cell_phone,
+    )
+    counter += 1
+    end
+end
+
 
 
 require 'faker'
@@ -51,7 +118,8 @@ require 'faker'
 	)
 end 
 
-	
+# puts "*(*******************seededquote:db ********************* "
+require 'faker'
 50.times do
 	Quote.create!(
 		building_type: ["residential", "corporate", "hybrid", "commercial"].sample,
@@ -70,45 +138,26 @@ end
 		installation_fee: Faker::Number.decimal(l_digits: 3, r_digits: 2),
 		final_price: Faker::Number.decimal(l_digits: 4, r_digits: 2),
 
-
 	)
 end
 
-counter = 0 
-adid = Address.first.id 
-45.times do
-	user = User.create(
-		email: Faker::Internet.email,
-		password: 'password',  
+
+puts "*(*******************seededbattery:db *********#{Battery.count}records********)*"
+
+Building.all.each do |bob|
+Employee.all.each do |slave|
+rand(1..4).times do
+	Battery.create!(
+		employees: slave,
+    	buildings: bob,
+    	Type: ["residential", "corporate", "hybrid", "commercial"].sample,
+   		Status: "online",
+  		CommissionDate: Faker::Date.between(3.years.ago, Date.today),
+    	LastInspectionDate: Faker::Date.between(1.years.ago, Date.today),
+    	OperationsCert: Faker::Demographic.educational_attainment,
+    	Information: Faker::Quote.matz,
+    	Notes: Faker::Quotes::Shakespeare.hamlet_quote,
 	)
-	Customer.create!( 
-		#  user: user,
-		 CustomerCreationDate: Faker::Movies::BackToTheFuture.date,
-		 date: Faker::Movies::BackToTheFuture.date,
-		 CompanyName: Faker::Movies::StarWars.droid,
-		 address_id: adid + counter ,
-		 FullNameOfCompanyContact: Faker::TvShows::RickAndMorty.character,
-		 CompanyContactPhone: Faker::PhoneNumber.cell_phone,
-		 CompanyContactEMail: Faker::Internet.email,
-		 CompanyDesc: Faker::DcComics.villain,
-		 FullNameServiceTechAuth: Faker::ProgrammingLanguage.creator,
-		 TechAuthPhoneService: Faker::PhoneNumber.cell_phone,
-		 TechManagerEmailService: Faker::Internet.email,
-	)	
-counter += 1 
+	end
 end
-puts "*(*******************seededcustomers:db *********#{Customer.count}records********)* "
-
-Customer.all.each do |cus|
-	rand(1..2).times do 
-		Building.create!(
-			"address_id"
-    		"customers_id"
-   			"FullNameOfBuildingAdmin"
-  		 	"EmailOfAdminOfBuilding"
- 			"PhoneNumOfBuildingAdmin"
- 			"FullNameOfTechContactForBuilding"
-     		"TechContactEmailForBuilding"
-     		"TechContactPhoneForBuilding"
-		)
-
+end
