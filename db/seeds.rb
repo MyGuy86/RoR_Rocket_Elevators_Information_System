@@ -37,41 +37,32 @@ puts "//***********Address Table seeded with #{Address.count} records*********"
 
 require 'csv'
 	csvfile = File.read(Rails.root.join('lib', 'seeds','EmployeeList.csv'))
-	csvfile = File.read(Rails.root.join('lib', 'EmployeeList.csv'))
+	# csvfile = File.read(Rails.root.join('lib', 'EmployeeList.csv'))
 
 	table = CSV.parse(csvfile, headers: true)
 	table.each do |row|
     	
-    	User.create(
-        email: row['email'],
-        password: 'password',
-    )
+    	user = User.create(
+        	email: row['email'],
+       		password: 'password',
+    	)
+	
 		Employee.create!(
-			# user_id:
-        last_name: row['last_name'],
-        title: row['title'],
-        first_name: row['first_name'],
-        email: row['email'],
-    )
+			user: user,
+        	last_name: row['last_name'],
+        	title: row['title'],
+        	first_name: row['first_name'],
+        	email: row['email'],
+    	)
     	AdminUser.create(
-        email: row['email'],
-        password: 'password',
-    )
+        	email: row['email'],
+        	password: 'password',
+    	)
 end
 	
 
-# require 'csv'
-# csvfile = File.read(Rails.root.join('lib', 'seeds', 'EmployeeList.csv'))
-# # CSV.read("EmployeeList.csv")
-# table = CSV.parse(csvfile, headers: true)
-# table.each do |row|
-#    EmployeeList.create!(
-#         first_name: Faker::FunnyName.name,
-#         last_name: row['last_name'],
-#         title: row['title'],
-#         email: row['email'],
-#     )
-# end
+
+ 
 
 require 'faker'
 100.times do 
@@ -89,22 +80,5 @@ require 'faker'
 end 
  puts "*(*******************seededlead:db ********************* "
 
-# Quote.create!(
-# 	building_type: ['residential', 'corporate', 'hybrid', 'commercial'].sample,
-#     service_quality:['standard', 'premium', 'excelium'].sample ,
-#     number_of_apartments: "number_of_apartments",
-#     number_of_floors: "number_of_floors",
-#     number_of_businesses: "number_of_businesses",
-#     number_of_basements: "number_of_basements",
-#     number_of_parking: "number_of_parking",
-#     number_of_cages: "number_of_cages",
-#     number_of_occupants: "number_of_occupants",
-#     number_of_hours:Faker::Number.within(range: 1..24),
-#     number_of_elevators_needed:,
-#     price_per_unit:,
-#     elevator_price:,
-#     installation_fee:,
-#     final_price:,
-# )
 
-# end
+

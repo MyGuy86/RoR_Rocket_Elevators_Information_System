@@ -150,12 +150,14 @@ ActiveRecord::Schema.define(version: 2022_11_01_145804) do
   end
 
   create_table "employees", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
+    t.bigint "user_id"
     t.string "first_name"
     t.string "last_name"
     t.string "title"
     t.string "email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_employees_on_user_id"
   end
 
   create_table "fact_contacts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
@@ -242,4 +244,5 @@ ActiveRecord::Schema.define(version: 2022_11_01_145804) do
   add_foreign_key "columns", "batteries", column: "batteries_id"
   add_foreign_key "customers", "users", column: "users_id"
   add_foreign_key "elevators", "columns", column: "columns_id"
+  add_foreign_key "employees", "users"
 end
