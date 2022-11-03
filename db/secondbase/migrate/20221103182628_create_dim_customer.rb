@@ -1,4 +1,4 @@
-class CreateDimCustomerTable < ActiveRecord::Migration[5.2]
+class CreateDimCustomer < ActiveRecord::Migration[5.2]
   def change
     create_table :dim_customers do |t|
       t.date :CreationDate
@@ -12,3 +12,4 @@ class CreateDimCustomerTable < ActiveRecord::Migration[5.2]
     end
   end
 end
+ 
