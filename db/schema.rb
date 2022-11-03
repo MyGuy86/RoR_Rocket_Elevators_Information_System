@@ -106,7 +106,7 @@ ActiveRecord::Schema.define(version: 2022_11_03_172625) do
 
   create_table "customers", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
     t.bigint "address_id"
-    t.bigint "users_id"
+    t.bigint "user_id"
     t.string "CustomerCreationDate"
     t.string "date"
     t.string "CompanyName"
@@ -121,18 +121,7 @@ ActiveRecord::Schema.define(version: 2022_11_03_172625) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["address_id"], name: "index_customers_on_address_id"
-    t.index ["users_id"], name: "index_customers_on_users_id"
-  end
-
-  create_table "dim_customers", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
-    t.date "CreationDate"
-    t.string "CompanyName"
-    t.string "FullNameOfCompanyMainContact"
-    t.string "EmailOfCompanyMainContact"
-    t.string "NbElevators"
-    t.string "CustomerCity"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_customers_on_user_id"
   end
 
   create_table "elevators", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
@@ -214,11 +203,8 @@ ActiveRecord::Schema.define(version: 2022_11_03_172625) do
   add_foreign_key "buildings", "addresses"
   add_foreign_key "buildings", "customers"
   add_foreign_key "columns", "batteries"
+  add_foreign_key "customers", "addresses"
   add_foreign_key "customers", "users"
   add_foreign_key "elevators", "columns"
-  add_foreign_key "buildings", "customers", column: "customers_id"
-  add_foreign_key "columns", "batteries", column: "batteries_id"
-  add_foreign_key "customers", "users", column: "users_id"
-  add_foreign_key "elevators", "columns", column: "columns_id"
   add_foreign_key "employees", "users"
 end
