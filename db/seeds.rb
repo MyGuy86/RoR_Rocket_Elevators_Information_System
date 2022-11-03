@@ -33,7 +33,7 @@ address_counter = 0;
 
 end
 
-puts "//***********Address Table seeded with #{Address.count} records*********"
+# puts "//***********Address Table seeded with #{Address.count} records*********"
 
 
 require 'faker'
@@ -71,30 +71,44 @@ end
 		final_price: Faker::Number.decimal(l_digits: 4, r_digits: 2),
 
 
-		)
-	end
-
-	customers.create!(
-		 users_id:
-		 CustomerCreationDate:
-		 date:
-		 CompanyName: Faker::Movies::StarWars.droid,
-		 CompanyHQAdress:
-		 FullNameOfCompanyContact: Faker::TvShows::RickAndMorty.character
-		 CompanyContactPhone: Faker::PhoneNumber.cell_phone
-		 CompanyContactEMail:
-		 CompanyDesc:
-		 FullNameServiceTechAuth:
-		 TechAuthPhoneService:
-		 TechManagerEmailService:
 	)
+end
 
+counter = 0 
+adid = Address.first.id 
+45.times do
+	user = User.create(
+		email: Faker::Internet.email,
+		password: 'password',  
+	)
+	Customer.create!( 
+		#  user: user,
+		 CustomerCreationDate: Faker::Movies::BackToTheFuture.date,
+		 date: Faker::Movies::BackToTheFuture.date,
+		 CompanyName: Faker::Movies::StarWars.droid,
+		 address_id: adid + counter ,
+		 FullNameOfCompanyContact: Faker::TvShows::RickAndMorty.character,
+		 CompanyContactPhone: Faker::PhoneNumber.cell_phone,
+		 CompanyContactEMail: Faker::Internet.email,
+		 CompanyDesc: Faker::DcComics.villain,
+		 FullNameServiceTechAuth: Faker::ProgrammingLanguage.creator,
+		 TechAuthPhoneService: Faker::PhoneNumber.cell_phone,
+		 TechManagerEmailService: Faker::Internet.email,
+	)	
+counter += 1 
+end
+puts "*(*******************seededcustomers:db *********#{Customer.count}records********)* "
 
-
-
-
-
-
-
-	# puts "*(*******************seededquote:db ********************* "
+Customer.all.each do |cus|
+	rand(1..2).times do 
+		Building.create!(
+			"address_id"
+    		"customers_id"
+   			"FullNameOfBuildingAdmin"
+  		 	"EmailOfAdminOfBuilding"
+ 			"PhoneNumOfBuildingAdmin"
+ 			"FullNameOfTechContactForBuilding"
+     		"TechContactEmailForBuilding"
+     		"TechContactPhoneForBuilding"
+		)
 
