@@ -1,4 +1,4 @@
-class CreateFactQuotes < ActiveRecord::Migration[5.2]
+class FactQuotes < ActiveRecord::Migration[5.2]
   def change
     create_table :fact_quotes do |t|
       t.integer :QuoteID
