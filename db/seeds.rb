@@ -36,13 +36,6 @@ end
 puts "//***********Address Table seeded with #{Address.count} records*********"
 
 
-
-
-
-
-
-
-
 require 'faker'
 100.times do 
 	Lead.create!(
