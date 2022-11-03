@@ -218,7 +218,6 @@ ActiveRecord::Schema.define(version: 2022_11_03_172625) do
   add_foreign_key "elevators", "columns"
   add_foreign_key "buildings", "customers", column: "customers_id"
   add_foreign_key "columns", "batteries", column: "batteries_id"
-  add_foreign_key "customers", "addresses"
   add_foreign_key "customers", "users", column: "users_id"
   add_foreign_key "elevators", "columns", column: "columns_id"
   add_foreign_key "employees", "users"
