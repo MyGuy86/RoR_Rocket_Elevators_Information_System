@@ -36,6 +36,32 @@ end
 puts "//***********Address Table seeded with #{Address.count} records*********"
 
 
+require 'csv'
+	csvfile = File.read(Rails.root.join('lib', 'seeds','EmployeeList.csv'))
+	# csvfile = File.read(Rails.root.join('lib', 'EmployeeList.csv'))
+
+	table = CSV.parse(csvfile, headers: true)
+	table.each do |row|
+    	
+    	user = User.create(
+        	email: row['email'],
+       		password: 'password',
+    	)
+	
+		Employee.create!(
+			user: user,
+        	last_name: row['last_name'],
+        	title: row['title'],
+        	first_name: row['first_name'],
+        	email: row['email'],
+    	)
+    	AdminUser.create(
+        	email: row['email'],
+        	password: 'password',
+    	)
+end
+
+
 require 'faker'
 100.times do 
 	Lead.create!(
@@ -50,6 +76,9 @@ require 'faker'
 		 Attached_file: "fix later",
 	)
 end 
+
+ puts "*(*******************seededlead:db ********************* "
+
 
 	
 	50.times do
@@ -97,6 +126,7 @@ require 'faker'
 
 	)
 end
+
 
 
 
