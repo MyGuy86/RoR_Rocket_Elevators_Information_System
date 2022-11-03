@@ -83,7 +83,7 @@ end
 
 
 
-puts "//***************Battery Table seeded with #{Battery.count} records*****************"
+# puts "//***************Battery Table seeded with #{Battery.count} records*****************"
 
 
 Customer.all.each do |cust|
