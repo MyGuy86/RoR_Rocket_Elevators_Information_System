@@ -66,6 +66,7 @@ require 'csv'
         	password: 'password',
     	)
 end
+AdminUser.create!(email: "admin@example.com", password: "password")
 require 'faker'
 100.times do 
 	# rand(1..4).times do?
