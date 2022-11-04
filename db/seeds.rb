@@ -8,12 +8,12 @@
 
 
 #load and parse json file
-jsonFile = File.read(Rails.root.join('lib', 'Addresses.json'));
-address_parse = JSON.parse(jsonFile);
+jsonFile = File.read(Rails.root.join('lib', 'Addresses.json'))
+address_parse = JSON.parse(jsonFile)
 #create random array
-randomarray = Array.new(address_parse['addresses'].count - 1) {|e| e += 1};
-arandom = randomarray.shuffle;
-address_counter = 0;
+randomarray = Array.new(address_parse['addresses'].count - 1) {|e| e += 1}
+arandom = randomarray.shuffle
+address_counter = 0
 
 (address_parse['addresses'].count -1).times do
 	thisaddress = address_parse['addresses'][arandom[address_counter]]
