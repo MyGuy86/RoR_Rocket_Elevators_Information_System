@@ -1,6 +1,6 @@
 require 'pg'
 require 'mysql'
-def leadsconvert
+# def leadsconvert
     Lead.all.each do |l|
         FactContact.create!(
         {
@@ -12,4 +12,4 @@ def leadsconvert
         }
     )
     end
-end
+# end
