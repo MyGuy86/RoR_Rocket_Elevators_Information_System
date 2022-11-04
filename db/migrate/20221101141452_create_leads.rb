@@ -10,7 +10,7 @@ class CreateLeads < ActiveRecord::Migration[5.2]
       t.string :Department_incharge
       t.string :Message
       t.string :Attached_file
-      
+      t.date :Creation_date
       t.timestamps
     end
   end
