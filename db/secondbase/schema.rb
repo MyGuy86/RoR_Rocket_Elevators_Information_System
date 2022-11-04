@@ -16,22 +16,22 @@ ActiveRecord::Schema.define(version: 2022_11_03_182805) do
   enable_extension "plpgsql"
 
   create_table "dim_customers", force: :cascade do |t|
-    t.date "CreationDate"
-    t.string "CompanyName"
-    t.string "FullNameOfCompanyMainContact"
-    t.string "EmailOfCompanyMainContact"
-    t.string "NbElevators"
-    t.string "CustomerCity"
+    t.datetime "creationdate"
+    t.string "companyname"
+    t.string "fullnameofcompanymaincontact"
+    t.string "emailofcompanymaincontact"
+    t.string "nbelevators"
+    t.string "customercity"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "fact_contacts", force: :cascade do |t|
-    t.integer "ContactID"
-    t.date "CreationDate"
-    t.string "CompanyName"
-    t.string "Email"
-    t.string "ProjectName"
+    t.integer "contactid"
+    t.datetime "creationdate"
+    t.string "companyname"
+    t.string "email"
+    t.string "projectname"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -47,11 +47,11 @@ ActiveRecord::Schema.define(version: 2022_11_03_182805) do
   end
 
   create_table "fact_quotes", force: :cascade do |t|
-    t.integer "QuoteID"
-    t.date "Creation"
-    t.string "CompanyName"
-    t.string "Email"
-    t.integer "NbElevator"
+    t.integer "quoteid"
+    t.datetime "creation"
+    t.string "companyname"
+    t.string "email"
+    t.integer "nbelevator"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
