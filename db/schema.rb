@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_11_03_142154) do
+ActiveRecord::Schema.define(version: 2022_11_03_172625) do
 
   create_table "active_admin_comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
     t.string "namespace"
@@ -105,6 +105,7 @@ ActiveRecord::Schema.define(version: 2022_11_03_142154) do
   end
 
   create_table "customers", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
+    t.bigint "address_id"
     t.bigint "user_id"
     t.string "CustomerCreationDate"
     t.string "date"
@@ -119,6 +120,7 @@ ActiveRecord::Schema.define(version: 2022_11_03_142154) do
     t.string "TechManagerEmailService"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["address_id"], name: "index_customers_on_address_id"
     t.index ["user_id"], name: "index_customers_on_user_id"
   end
 
@@ -201,6 +203,7 @@ ActiveRecord::Schema.define(version: 2022_11_03_142154) do
   add_foreign_key "buildings", "addresses"
   add_foreign_key "buildings", "customers"
   add_foreign_key "columns", "batteries"
+  add_foreign_key "customers", "addresses"
   add_foreign_key "customers", "users"
   add_foreign_key "elevators", "columns"
   add_foreign_key "employees", "users"
