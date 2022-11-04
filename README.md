@@ -6,8 +6,18 @@ Initial Password: password
 4. Data warehouse based on postgresql, supported by secondbase panel.
 5. Queries to answer 3 questions are saved in the root. queryforcontact, queryforquotes, queryforelevatorspercustomer
 6. Graghs are as follows:
-!Contactrequestspermonth(https://github.com/0xJungleMonkey/-Rocket-Elevators-Golang-Controller/blob/1ce36428cf97d3dc315b46492ff43614f22ac892/output1.png) "Test pass output")
-!Quotesrequestspermonth(https://github.com/0xJungleMonkey/-Rocket-Elevators-Golang-Controller/blob/1ce36428cf97d3dc315b46492ff43614f22ac892/output2.png "Test pass output")
-!Elevatorspercustomer(https://github.com/0xJungleMonkey/-Rocket-Elevators-Golang-Controller/blob/1ce36428cf97d3dc315b46492ff43614f22ac892/output2.png "Test pass output")
+
+https://github.com/MyGuy86/RoR_Rocket_Elevators_Information_System/blob/9b3cc901549da855e7fa8eb18d9ae13fdfcef3df/queryforcontact.png
+![Contactrequestspermonth(https://user-images.githubusercontent.com/86534234/200048431-e4c49097-5a96-4e86-8e1f-065a6e2e2387.png)
+
+
+https://github.com/MyGuy86/RoR_Rocket_Elevators_Information_System/blob/9b3cc901549da855e7fa8eb18d9ae13fdfcef3df/queryforcontact.png
+![Quotesrequestspermonth(https://user-images.githubusercontent.com/86534234/200048190-f7a5ed19-5cce-467e-bc75-5e01267d010e.png)
+
+
+https://github.com/MyGuy86/RoR_Rocket_Elevators_Information_System/blob/9b3cc901549da855e7fa8eb18d9ae13fdfcef3df/queryforelevatorspercustomer.png
+!Elevatorspercustomer(https://user-images.githubusercontent.com/86534234/200048003-0c49fbf0-4393-4e46-8eef-49a435903fdd.png)
+
+
 
 
