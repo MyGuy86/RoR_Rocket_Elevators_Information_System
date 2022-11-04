@@ -1,11 +1,11 @@
 class CreateFactQuotes < ActiveRecord::Migration[5.2]
   def change
     create_table :fact_quotes do |t|
-      t.integer :QuoteID
-      t.date :Creation
-      t.string :CompanyName
-      t.string :Email
-      t.integer :NbElevator
+      t.integer :quoteid
+      t.datetime :creation
+      t.string :companyname
+      t.string :email
+      t.integer :nbelevator
 
       t.timestamps
 

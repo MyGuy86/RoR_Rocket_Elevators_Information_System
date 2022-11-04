@@ -109,7 +109,7 @@ end
 record = Address.first.id
 counter = 0
 add_id = record + counter
-25.times do
+35.times do
     user = User.create(
         email: Faker::Internet.email,
         password: 'password',
