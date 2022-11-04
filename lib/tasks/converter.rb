@@ -2,6 +2,7 @@ require 'pg'
 require 'mysql2'
 
 
+
 # def leadsconvert
     Lead.all.each do |l|
         FactContact.create!(
@@ -14,6 +15,7 @@ require 'mysql2'
         }
     )
     end
+
 # end
 # leadsconvert;
 # def quotesconvert
@@ -59,3 +61,6 @@ require 'mysql2'
 # end
 
     
+=======
+# end
+
