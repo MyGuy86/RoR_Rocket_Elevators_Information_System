@@ -48,7 +48,7 @@ def customersconvert
             FullNameOfCompanyMainContact: c.FullNameOfCompanyContact,
             EmailOfCompanyMainContact: c.CompanyContactEMail,
             CustomerCity:c.CompanyHQAdress
-            }
+            })
             NbElevators
         )
 
@@ -61,13 +61,14 @@ def customersconvert
 #             serial_number: e.SerialNumber
 #             date_of_commissioning: e.CommisionDate
 #         )
-#             building_id: 
+#             building_id:
 #             customer_id:
 #             building_city:
 #     end
 # end
 # elevatorsconvert;
-    
+
+
 
 
 
