@@ -1,15 +1,15 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  QuoteID: 
-  Creation: 2022-10-31
-  CompanyName: MyString
-  Email: MyString
-  NbElevator: 
+  quote_id: 1
+  creation: 2022-11-03 14:22:47
+  company_name: MyString
+  email: MyString
+  NbElevator: 1
 
 two:
-  QuoteID: 
-  Creation: 2022-10-31
-  CompanyName: MyString
-  Email: MyString
-  NbElevator: 
+  quote_id: 1
+  creation: 2022-11-03 14:22:47
+  company_name: MyString
+  email: MyString
+  NbElevator: 1

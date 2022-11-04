@@ -10,9 +10,50 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 2022_11_03_182805) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "dim_customers", force: :cascade do |t|
+    t.date "CreationDate"
+    t.string "CompanyName"
+    t.string "FullNameOfCompanyMainContact"
+    t.string "EmailOfCompanyMainContact"
+    t.string "NbElevators"
+    t.string "CustomerCity"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "fact_contacts", force: :cascade do |t|
+    t.integer "ContactID"
+    t.date "CreationDate"
+    t.string "CompanyName"
+    t.string "Email"
+    t.string "ProjectName"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "fact_elevators", force: :cascade do |t|
+    t.string "serial_number"
+    t.datetime "date_of_commissioning"
+    t.string "building_id"
+    t.integer "customer_id"
+    t.string "building_city"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "fact_quotes", force: :cascade do |t|
+    t.integer "QuoteID"
+    t.date "Creation"
+    t.string "CompanyName"
+    t.string "Email"
+    t.integer "NbElevator"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
 end
