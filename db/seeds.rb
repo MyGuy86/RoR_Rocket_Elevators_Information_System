@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-#load and parse json file
+# load and parse json file
 jsonFile = File.read(Rails.root.join('lib', 'Addresses.json'));
 address_parse = JSON.parse(jsonFile);
 #create random array
@@ -59,27 +59,27 @@ require 'csv'
     	)
 end
 
-record = Address.first.id
-counter = 0
-45.times do
-    user = User.create(
-        email: Faker::Internet.email,
-        password: 'password',
-    )
-    Customer.create!(
-        user: user,
-        customer_creation_date: Faker::Date.between(3.years.ago, Date.today),
-        company_name: (Faker::Company.name + Faker::Company.suffix),
-        address_id: record + counter,
-        contact_full_name: Faker::Name.unique.name,
-        company_contact_phone: Faker::PhoneNumber.cell_phone,
-        company_contact_email: Faker::Internet.email,
-        service_tech_full_name: Faker::Name.unique.name,
-        service_tech_phone: Faker::PhoneNumber.cell_phone,
-        tech_manager_email: Faker::Internet.email,
-    )
-    counter += 1
-end
+# record = Address.first.id
+# counter = 0
+# 45.times do
+#     user = User.create(
+#         email: Faker::Internet.email,
+#         password: 'password',
+#     )
+#     Customer.create!(
+#         user: user,
+#         customer_creation_date: Faker::Date.between(3.years.ago, Date.today),
+#         company_name: (Faker::Company.name + Faker::Company.suffix),
+#         address_id: record + counter,
+#         contact_full_name: Faker::Name.unique.name,
+#         company_contact_phone: Faker::PhoneNumber.cell_phone,
+#         company_contact_email: Faker::Internet.email,
+#         service_tech_full_name: Faker::Name.unique.name,
+#         service_tech_phone: Faker::PhoneNumber.cell_phone,
+#         tech_manager_email: Faker::Internet.email,
+#     )
+#     counter += 1
+# end
 
 
 
