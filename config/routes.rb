@@ -11,7 +11,7 @@ Rails.application.routes.draw do
 
 root 'pages#index'
 
-
+  root 'post#quotes'
 
 get '/commercial', to: 'pages#commercial'
 

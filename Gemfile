@@ -19,6 +19,8 @@ gem 'pg'
 
 gem 'secondbase', '~> 2.1'
 
+gem "chartkick"
+
 # Use Puma as the app server
 # gem 'puma', '~> 4.3.11'
 gem 'puma', '~> 4.3.11'
