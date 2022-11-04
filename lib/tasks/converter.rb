@@ -1,9 +1,6 @@
 require 'pg'
 require 'mysql2'
-
-
-
-# def leadsconvert
+def leadsconvert
     Lead.all.each do |l|
         FactContact.create!(
         {
@@ -15,39 +12,49 @@ require 'mysql2'
         }
     )
     end
-
-# end
-# leadsconvert;
-# def quotesconvert
+end
+leadsconvert();
+def quotesconvert
     Quote.all.each do |q|
-        FactQuote.create!(
-#             {
+        lead = Lead.find(q.id)
+        factquote=FactQuote.create!(
+            {
                 QuoteID: q.id,
-                Creation: q.created_at,
                 NbElevator: q.number_of_elevators_needed,
-#             }
+                Creation: lead.Creation_date,
+                CompanyName: lead.Bussiness_name,
+                Email: lead.Email,
 
-#             CompanyName: l.Bussiness_name,
-#             Email: l.Email,
-
+            }
         )
+        
     end
-# end
-# def customersconvert
-#     Customer.all.each do |c|
-#         CustomerContact.create!(
-#             {
-#             CreationDate: c.date,
-#             CompanyName: c.CompanyName,
-#             FullNameOfCompanyMainContact: c.FullNameOfCompanyContact,
-#             EmailOfCompanyMainContact: c.CompanyContactEMail,
-#             CustomerCity:c.CompanyHQAdress
-#             }
-#         )
+end
+quotesconvert();
 
-#             q.NbElevators: 
+def customersconvert
+    Customer.all.each do |c|
+        Building.all.each do 
+            Battery.all.each do
+                Column.all.each do 
+                    Elevator.all.each do 
+                        
+                        
+
+        DimCustomer.create!(
+            {
+            CreationDate: c.date,
+            CompanyName: c.CompanyName,
+            FullNameOfCompanyMainContact: c.FullNameOfCompanyContact,
+            EmailOfCompanyMainContact: c.CompanyContactEMail,
+            CustomerCity:c.CompanyHQAdress
+            }
+            NbElevators
+        )
+
 #     end
 # end
+# customersconvert;
 # def elevatorsconvert
 #     Elevator.all.each do |e|
 #         ElevatorContact.create!(
@@ -59,8 +66,8 @@ require 'mysql2'
 #             building_city:
 #     end
 # end
-
+# elevatorsconvert;
     
-=======
-# end
+
+
 
