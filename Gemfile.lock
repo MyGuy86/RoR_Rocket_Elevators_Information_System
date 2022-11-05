@@ -323,7 +323,6 @@ DEPENDENCIES
   capistrano-rbenv (~> 2.2)
   capistrano3-puma (= 5.2.0)
   capybara (>= 2.15)
-  chartkick
   chromedriver-helper
   coffee-rails (~> 4.2)
   devise
